@@ -3,6 +3,10 @@
     color: #0075db;
   }
 
+  h3 {
+    color: #1c7c8d;
+  }
+
   button.btn-primary {
     color: #000000;
     background-color: #ffc700;
@@ -46,9 +50,7 @@ page_content %}
     <div class="box">
       <div class="question-list btn-group-vertical w-100">
         {% for child in page.children %} {% if child.type_name == 'Question' %}
-        <a class="btn btn-outline-secondary btn-block" href="{{ child.url }}"
-          >{{ child.headline }}</a
-        >
+        <h3>{{ child.headline }}</h3>
         {% endif %} {% endfor %}
       </div>
     </div>
@@ -67,7 +69,7 @@ page_content %}
         class="{% unless forloop.last == true %}mb-4{% endunless %} page-excerpt question-page-{{ child.id }}"
       >
         {% if child.type_name == 'Question' %}
-        <h3><a href="{{ child.url }}">{{ child.headline }}</a></h3>
+        <h3>{{ child.headline }}</h3>
 
         <div class="excerpt">
           {% if child.question.content.size > 0 %} {{ child.question.content }}

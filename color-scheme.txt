@@ -1,0 +1,13 @@
+green-blue (subtext): #1C7C8D
+
+dark blue (text): #0075DB
+
+dark blue (elements): #0086FF
+
+bright blue (elements): #4FC8DC
+
+bright green-blue: #3E98A1
+
+yellow: #FFC700
+
+white: #FFFFFF
