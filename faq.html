@@ -1,0 +1,99 @@
+<style>
+  a {
+    color: #0075db;
+  }
+
+  button.btn-primary {
+    color: #000000;
+    background-color: #ffc700;
+    border-color: #ffc700;
+  }
+
+  div.form {
+    background-color: #0075db;
+  }
+
+  div.form p {
+    color: #ffffff;
+  }
+
+  div.form label {
+    color: #ededed !important;
+  }
+
+  div.question-list {
+    display: none;
+  }
+
+  footer.rapid-footer nav a {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #0075db;
+    letter-spacing: 1px;
+  }
+
+  footer.rapid-footer p {
+    font-size: 1rem;
+    color: #000000;
+  }
+</style>
+
+{% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
+page_content %}
+
+<div class="row flex-row-reverse">
+  <div class="col-md-4">
+    <div class="box">
+      <div class="question-list btn-group-vertical w-100">
+        {% for child in page.children %} {% if child.type_name == 'Question' %}
+        <a class="btn btn-outline-secondary btn-block" href="{{ child.url }}"
+          >{{ child.headline }}</a
+        >
+        {% endif %} {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8 pt-4 pt-md-0">
+    {% if page.faq.content.size > 0 %}
+    <div id="intro" class="intro">
+      {{ page.faq.content }}
+    </div>
+    {% endif %}
+
+    <ul class="list-unstyled mb-4 faq faq-{{ page.id }}">
+      {% for child in page.children %}
+      <li
+        class="{% unless forloop.last == true %}mb-4{% endunless %} page-excerpt question-page-{{ child.id }}"
+      >
+        {% if child.type_name == 'Question' %}
+        <h3><a href="{{ child.url }}">{{ child.headline }}</a></h3>
+
+        <div class="excerpt">
+          {% if child.question.content.size > 0 %} {{ child.question.content }}
+          {% endif %} {% if child.question.answer.size > 0 %}
+          <div class="card">
+            <div class="card-body">
+              {{ child.question.answer }}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% if page.tags_count > 0 %}
+    <div class="mt-4">
+      {% include "page_tags" with page %}
+    </div>
+    {% endif %} {% if page.show_stream? %}
+    <div class="mt-4">
+      {% include "page_stream" %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{% endcapture %} {% include "content", sidebar: request.is_sidebar? %}
