@@ -28,6 +28,10 @@
     background-color: #0086ff;
   }
 
+  #logo-image-empty-homes-tax {
+    margin-bottom: 24px;
+  }
+
   footer.rapid-footer nav a {
     font-size: 1.2rem;
     font-weight: 900;
@@ -42,9 +46,15 @@
 </style>
 
 {% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
-page_content %} {% if page.donation_v2.content.size > 0 %} {{
-page.donation_v2.content }} {% endif %} {% if page.donation_v2.has_amount_goal?
-%}
+page_content %}
+<img
+  id="logo-image-empty-homes-tax"
+  src="https://dsasf-62612.web.app/1.png"
+  width="100%"
+/>
+
+{% if page.donation_v2.content.size > 0 %} {{ page.donation_v2.content }} {%
+endif %} {% if page.donation_v2.has_amount_goal? %}
 <div class="mb-3">
   {% include "progress" percent: page.donation_v2.percent_of_amount_goal, count:
   page.donations_count, amount: page.donations_amount_format, goal:
