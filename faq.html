@@ -50,12 +50,6 @@
 page_content %}
 
 <div class="row flex-row-reverse">
-  <img
-    id="logo-image-empty-homes-tax"
-    src="https://dsasf-62612.web.app/1.png"
-    width="100%"
-  />
-
   <div class="col-md-4">
     <div class="box">
       <div class="question-list btn-group-vertical w-100">
@@ -69,6 +63,11 @@ page_content %}
   <div class="col-md-8 pt-4 pt-md-0">
     {% if page.faq.content.size > 0 %}
     <div id="intro" class="intro">
+      <img
+        id="logo-image-empty-homes-tax"
+        src="https://dsasf-62612.web.app/empty-homes-tax/banner-title.png"
+        width="100%"
+      />
       {{ page.faq.content }}
     </div>
     {% endif %}
@@ -95,6 +94,12 @@ page_content %}
       </li>
       {% endfor %}
     </ul>
+
+    <img
+      id="logo-image-empty-homes-tax"
+      src="https://dsasf-62612.web.app/empty-homes-tax/banner-donate.png"
+      width="100%"
+    />
 
     {% if page.tags_count > 0 %}
     <div class="mt-4">
