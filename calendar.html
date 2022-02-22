@@ -7,32 +7,35 @@
   }
 
   button.btn-primary,
+  input.btn-primary,
   a.btn-primary {
     color: #000000;
     background-color: #ffc700;
     border-color: #ffc700;
   }
   button.btn-primary:hover,
+  input.btn-primary:hover,
   a.btn-primary:hover {
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: #3e98a1;
     border-color: #3e98a1;
   }
 
+  input.form-control:focus,
+  select:focus,
+  div.payment-input:focus {
+    border-color: #0086ff !important;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before,
+  .custom-control-input:focus {
+    color: #fff;
+    border-color: #0086ff;
+    background-color: #0086ff;
+  }
+
   #logo-image-empty-homes-tax {
     margin-bottom: 48px;
-  }
-
-  div.form {
-    background-color: #0075db;
-  }
-
-  div.form p {
-    color: #ffffff;
-  }
-
-  div.form label {
-    color: #ededed !important;
   }
 
   footer.rapid-footer nav a {
