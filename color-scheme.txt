@@ -2,6 +2,8 @@ green-blue (subtext): #1C7C8D
 
 dark blue (text): #0075DB
 
+link legal footer blue: #0067C2
+
 dark blue (elements): #0086FF
 
 bright blue (elements): #4FC8DC
