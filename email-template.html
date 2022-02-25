@@ -37,8 +37,8 @@
         width: 100%;
         height: auto;
       }
-      .body-content a {
-        color: #1488b9;
+      .a {
+        color: #0067c2;
       }
       @media screen and (max-width: 600px) {
         table[class="container"] {
@@ -97,7 +97,7 @@
                 "
               >
                 {% if settings.site.has_meta_image? %}
-                <div style="width: 220px;">
+                <div style="margin: auto; max-width: 300px;">
                   <a href="{{ settings.site.full_url }}">
                     <img
                       src="{{ settings.site.meta_image_url }}"
@@ -139,46 +139,38 @@
                   padding-top: 30px;
                 "
               >
-                <p style="color: #333333; font-size: 14px; line-height: 1.5;">
-                  {{ settings.official_name }}{% if settings.has_address? %}
-                  &middot; {{ settings.address.one_line }} {% endif %}
-                  <br />This email was sent to
-                  <a style="color: #1488b9;" href="mailto:{{ recipient.email }}"
-                    >{{ recipient.email }}</a
-                  >. To stop receiving emails,
-                  <a
-                    style="color: #1488b9;"
-                    href="{{ settings.site.unsubscribe_url }}"
-                    >click here</a
-                  >. {% if broadcaster.has_twitter? or broadcaster.has_facebook?
-                  %} <br />You can also keep up with {{ broadcaster.name }} {%
-                  if broadcaster.has_twitter? and broadcaster.has_facebook_page?
-                  %} on
-                  <a
-                    style="color: #1488b9;"
-                    href="{{ broadcaster.twitter_profile_url }}"
-                    >Twitter</a
-                  >
-                  or
-                  <a
-                    style="color: #1488b9;"
-                    href="{{ broadcaster.facebook_page_profile_url }}"
-                    >Facebook</a
-                  >. {% elsif broadcaster.has_twitter? %} on
-                  <a
-                    style="color: #1488b9;"
-                    href="{{ broadcaster.twitter_profile_url }}"
-                    >Twitter</a
-                  >. {% elsif broadcaster.has_facebook_page? %} on
-                  <a
-                    style="color: #1488b9;"
-                    href="{{ broadcaster.facebook_page_profile_url }}"
-                    >Facebook</a
-                  >. {% endif %} {% endif %}
-                </p>
+                <div style="margin: auto; text-align: center; font-size: 14px;">
+                  <p style="color: #333333; font-size: 16px; line-height: 1.6;">
+                    You can keep up with the Empty Homes Tax campaign on
+                    <a href="https://www.facebook.com/EmptyHomesTax">Facebook</a
+                    >.
+                  </p>
+                  <br />
+                  <p style="line-height: 1;">
+                    <u>Paid for by Activate Housing FPPC ID 1442898.</u>
+                  </p>
+                  <p style="line-height: 1;">
+                    <u>Committee major funding from:</u>
+                  </p>
+                  <p style="line-height: 0.8;">1. TODCO ($30,000)</p>
+                  <p style="line-height: 0.8;">2. Sam Heft-Luthy ($7,500)</p>
+                  <p style="line-height: 0.8;">3. Jeff May ($5,000)</p>
+                  <p style="line-height: 1;">
+                    <u
+                      >Financial disclosures are available at
+                      <a href="https://sfethics.org/">sfethics.org</a></u
+                    >
+                  </p>
+                </div>
               </td>
             </tr>
           </table>
+          <p style="color: #333333; font-size: 14px; line-height: 1.5;">
+            <br />This email was sent to
+            <a href="mailto:{{ recipient.email }}">{{ recipient.email }}</a>. To
+            stop receiving emails,
+            <a href="{{ settings.site.unsubscribe_url }}">click here</a>.
+          </p>
           <p
             style="
               font-size: 13px;
@@ -189,10 +181,7 @@
               text-align: center;
             "
           >
-            Created with
-            <a href="https://nationbuilder.com" style="color: #1488b9;"
-              >NationBuilder</a
-            >, software for leaders.
+            Created with NationBuilder.
           </p>
           <!-- ### 600PX CONTAINER ###  -->
         </td>
