@@ -2,35 +2,62 @@
   a {
     color: #0075db;
   }
-
-  h3 {
-    color: #1c7c8d;
+  h3,
+  a:hover {
+    color: #1c7c8d !important;
   }
 
-  button.btn-primary {
+  button.btn-primary,
+  input.btn-primary,
+  a.btn-primary {
     color: #000000;
     background-color: #ffc700;
     border-color: #ffc700;
   }
-
-  div.form {
-    background-color: #0075db;
-  }
-
-  div.form p {
+  button.btn-primary:hover,
+  input.btn-primary:hover,
+  a.btn-primary:hover {
     color: #ffffff;
+    background-color: #3e98a1;
+    border-color: #3e98a1;
   }
 
-  div.form label {
-    color: #ededed !important;
+  input.form-control:focus,
+  select:focus,
+  div.payment-input:focus {
+    border-color: #0086ff !important;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before,
+  .custom-control-input:focus {
+    color: #fff;
+    border-color: #0086ff;
+    background-color: #0086ff;
+  }
+
+  #logo-image-empty-homes-tax {
+    margin-bottom: 48px;
+    margin-left: auto:
+    margin-right: auto;
+    max-width: 700px;
+  }
+
+  #logo-image-empty-homes-tax-donate {
+    margin-top: 64px;
+    margin-bottom: 48px;
+    margin-left: auto:
+    margin-right: auto;
+    max-width: 700px;
   }
 
   div.question-list {
     display: none;
   }
 
-  #logo-image-empty-homes-tax {
-    margin-bottom: 24px;
+  footer.rapid-footer p:first-of-type a:first-of-type {
+    font-size: 1rem;
+    color: #0067c2;
+    text-decoration: underline;
   }
 
   footer.rapid-footer nav a {
@@ -38,6 +65,7 @@
     font-weight: 900;
     color: #0075db;
     letter-spacing: 1px;
+    text-decoration: none;
   }
 
   footer.rapid-footer p {
@@ -61,16 +89,13 @@ page_content %}
   </div>
 
   <div class="col-md-8 pt-4 pt-md-0">
-    {% if page.faq.content.size > 0 %}
     <div id="intro" class="intro">
       <img
         id="logo-image-empty-homes-tax"
         src="https://dsasf-62612.web.app/empty-homes-tax/banner-title.png"
         width="100%"
       />
-      {{ page.faq.content }}
     </div>
-    {% endif %}
 
     <ul class="list-unstyled mb-4 faq faq-{{ page.id }}">
       {% for child in page.children %}
@@ -95,11 +120,13 @@ page_content %}
       {% endfor %}
     </ul>
 
-    <img
-      id="logo-image-empty-homes-tax"
-      src="https://dsasf-62612.web.app/empty-homes-tax/banner-donate.png"
-      width="100%"
-    />
+    <a href="https://www.fillemptyhomes.com/donate">
+      <img
+        id="logo-image-empty-homes-tax-donate"
+        src="https://dsasf-62612.web.app/empty-homes-tax/banner-donate.png"
+        width="100%"
+      />
+    </a>
 
     {% if page.tags_count > 0 %}
     <div class="mt-4">
