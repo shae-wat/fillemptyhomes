@@ -1,12 +1,74 @@
+<style>
+  a {
+    color: #0075db;
+  }
+  a:hover {
+    color: #1c7c8d !important;
+  }
+
+  button.btn-primary,
+  input.btn-primary,
+  a.btn-primary {
+    color: #000000;
+    background-color: #ffc700;
+    border-color: #ffc700;
+  }
+  button.btn-primary:hover,
+  input.btn-primary:hover,
+  a.btn-primary:hover {
+    color: #ffffff !important;
+    background-color: #3e98a1;
+    border-color: #3e98a1;
+  }
+
+  input.form-control:focus,
+  select:focus,
+  div.payment-input:focus {
+    border-color: #0086ff !important;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before,
+  .custom-control-input:focus {
+    color: #fff;
+    border-color: #0086ff;
+    background-color: #0086ff;
+  }
+
+  #logo-image-empty-homes-tax {
+    margin-bottom: 48px;
+  }
+
+  footer.rapid-footer p:first-of-type a:first-of-type {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  footer.rapid-footer p:nth-child(2) a:first-of-type {
+    font-size: 1rem;
+    color: #0067c2;
+    text-decoration: underline;
+  }
+
+  footer.rapid-footer nav a {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #0075db;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+
+  footer.rapid-footer p {
+    font-size: 1rem;
+    color: #000000;
+  }
+</style>
+
 {% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
 page_content %} {{ page.basic.content }} {% include "page_tags" with page %} {%
 if page.is_homepage? == true and site.page_tags contains "homepage" %}
 <div class="mt-4">
   {% tag "homepage" with "homepage_widget" %}
-</div>
-{% endif %} {% include "like_page" %} {% if page.show_stream? %}
-<div class="mt-4">
-  {% include "page_stream" %}
 </div>
 {% endif %} {% endcapture %} {% include "content", sidebar: request.is_sidebar?
 %}
