@@ -1,0 +1,12 @@
+{% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
+page_content %} {{ page.basic.content }} {% include "page_tags" with page %} {%
+if page.is_homepage? == true and site.page_tags contains "homepage" %}
+<div class="mt-4">
+  {% tag "homepage" with "homepage_widget" %}
+</div>
+{% endif %} {% include "like_page" %} {% if page.show_stream? %}
+<div class="mt-4">
+  {% include "page_stream" %}
+</div>
+{% endif %} {% endcapture %} {% include "content", sidebar: request.is_sidebar?
+%}
