@@ -42,6 +42,38 @@
     margin-bottom: 48px;
   }
 
+  .rapid-header {
+    min-height: 240px !important;
+  }
+
+  .my-5 {
+    margin-top: 0 !important;
+  }
+
+  nav.custom-header {
+    position: relative;
+    background-color: #0075db;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+  }
+
+  nav.custom-header a {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fefefe;
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  nav.custom-header a:hover {
+    color: #ffc700 !important;
+  }
+
   .container li {
     color: #24585b;
     font-size: 1.1rem;
@@ -83,8 +115,21 @@
 </style>
 
 {% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
-page_content %} {{ page.basic.content }} {% include "page_tags" with page %} {%
-if page.is_homepage? == true and site.page_tags contains "homepage" %}
+page_content %}
+<nav class="row custom-header">
+  <a href="/donate">Donate</a>
+  <a href="/">Join</a>
+  <a href="/calendar">Calendar</a>
+  <a href="/faq">FAQ</a>
+  <a href="/endorsements">Supporters</a>
+  <a
+    href="https://dsasf-62612.web.app/empty-homes-tax/Casas-Vacias-Hoja-de-Hechos.pdf"
+    target="_blank"
+    >Hoja de Hechos
+  </a>
+</nav>
+{{ page.basic.content }} {% include "page_tags" with page %} {% if
+page.is_homepage? == true and site.page_tags contains "homepage" %}
 <div class="mt-4">
   {% tag "homepage" with "homepage_widget" %}
 </div>

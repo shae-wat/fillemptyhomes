@@ -53,6 +53,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 100%;
   }
 
   nav.custom-header a {
@@ -106,7 +107,7 @@
 {% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
 page_content %}
 
-<nav class="row custom-header mr-lg-0">
+<nav class="row custom-header">
   <a href="/donate">Donate</a>
   <a href="/">Join</a>
   <a href="/calendar">Calendar</a>
