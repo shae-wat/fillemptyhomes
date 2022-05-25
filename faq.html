@@ -39,7 +39,6 @@
     margin-bottom: 48px;
     margin-left: auto:
     margin-right: auto;
-    max-width: 700px;
   }
 
   #logo-image-empty-homes-tax-donate {
@@ -47,7 +46,46 @@
     margin-bottom: 48px;
     margin-left: auto:
     margin-right: auto;
-    max-width: 700px;
+  }
+
+  .rapid-header {
+    min-height: 240px !important;
+  }
+
+  .my-5 {
+    margin-top: 0 !important;
+  }
+
+  nav.custom-header {
+    position: relative;
+    background-color: #0075db;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+  }
+
+  nav.custom-header a {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fefefe;
+    letter-spacing: 1px;
+    word-spacing: -3px;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  nav.custom-header a:hover {
+    color: #ffc700 !important;
+  }
+
+  @media only screen and (max-width: 768px) {
+    nav.custom-header a {
+      font-size: 1rem;
+      font-weight: 800;
+    }
   }
 
   div.question-list {
@@ -91,6 +129,22 @@
 {% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
 page_content %}
 
+<nav class="row custom-header">
+  <a href="/">Join</a>
+  <a href="/calendar">Calendar</a>
+  <a href="/endorsements">Supporters</a>
+  <a
+    href="https://dsasf-62612.web.app/empty-homes-tax/Casas-Vacias-Hoja-de-Hechos.pdf"
+    target="_blank"
+    >Hoja de Hechos</a
+  >
+</nav>
+<img
+  id="logo-image-empty-homes-tax"
+  src="https://dsasf-62612.web.app/empty-homes-tax/banner-title.png"
+  width="100%"
+/>
+
 <div class="row flex-row-reverse">
   <div class="col-md-4">
     <div class="box">
@@ -103,14 +157,6 @@ page_content %}
   </div>
 
   <div class="col-md-8 pt-4 pt-md-0">
-    <div id="intro" class="intro">
-      <img
-        id="logo-image-empty-homes-tax"
-        src="https://dsasf-62612.web.app/empty-homes-tax/banner-title.png"
-        width="100%"
-      />
-    </div>
-
     <ul class="list-unstyled mb-4 faq faq-{{ page.id }}">
       {% for child in page.children %}
       <li
@@ -141,17 +187,17 @@ page_content %}
         width="100%"
       />
     </a>
-
-    {% if page.tags_count > 0 %}
-    <div class="mt-4">
-      {% include "page_tags" with page %}
-    </div>
-    {% endif %} {% if page.show_stream? %}
-    <div class="mt-4">
-      {% include "page_stream" %}
-    </div>
-    {% endif %}
   </div>
+
+  {% if page.tags_count > 0 %}
+  <div class="mt-4">
+    {% include "page_tags" with page %}
+  </div>
+  {% endif %} {% if page.show_stream? %}
+  <div class="mt-4">
+    {% include "page_stream" %}
+  </div>
+  {% endif %}
 </div>
 
 {% endcapture %} {% include "content", sidebar: request.is_sidebar? %}

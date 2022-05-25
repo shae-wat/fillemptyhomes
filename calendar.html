@@ -62,12 +62,20 @@
     font-weight: 900;
     color: #fefefe;
     letter-spacing: 1px;
+    word-spacing: -3px;
     text-decoration: none;
     margin-left: auto;
     margin-right: auto;
   }
   nav.custom-header a:hover {
     color: #ffc700 !important;
+  }
+
+  @media only screen and (max-width: 768px) {
+    nav.custom-header a {
+      font-size: 1rem;
+      font-weight: 800;
+    }
   }
 
   footer.rapid-footer p:nth-child(2) {
@@ -108,15 +116,13 @@
 page_content %}
 
 <nav class="row custom-header">
-  <a href="/donate">Donate</a>
   <a href="/">Join</a>
-  <a href="/calendar">Calendar</a>
   <a href="/faq">FAQ</a>
   <a href="/endorsements">Supporters</a>
   <a
     href="https://dsasf-62612.web.app/empty-homes-tax/Casas-Vacias-Hoja-de-Hechos.pdf"
     target="_blank"
-    >Hoja de Hechos</a
+    >Hoja de Hechos ➚</a
   >
 </nav>
 
