@@ -38,6 +38,37 @@
     margin-bottom: 48px;
   }
 
+  .rapid-header {
+    min-height: 240px !important;
+  }
+
+  .my-5 {
+    margin-top: 0 !important;
+  }
+
+  nav.custom-header {
+    position: relative;
+    background-color: #0075db;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav.custom-header a {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fefefe;
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  nav.custom-header a:hover {
+    color: #ffc700 !important;
+  }
+
   footer.rapid-footer p:nth-child(2) {
     margin-bottom: 0;
   }
@@ -74,6 +105,20 @@
 
 {% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
 page_content %}
+
+<nav class="row custom-header mr-lg-0">
+  <a href="/donate">Donate</a>
+  <a href="/">Join</a>
+  <a href="/calendar">Calendar</a>
+  <a href="/faq">FAQ</a>
+  <a href="/endorsements">Supporters</a>
+  <a
+    href="https://dsasf-62612.web.app/empty-homes-tax/Casas-Vacias-Hoja-de-Hechos.pdf"
+    target="_blank"
+    >Hoja de Hechos</a
+  >
+</nav>
+
 <img
   id="logo-image-empty-homes-tax"
   src="https://dsasf-62612.web.app/empty-homes-tax/banner-title.png"
