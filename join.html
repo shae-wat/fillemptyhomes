@@ -64,6 +64,59 @@
     margin-bottom: 24px;
   }
 
+  nav.custom-header {
+    position: relative;
+    background-color: #0075db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    border-radius: 0.3rem;
+    padding: 3px;
+  }
+
+  nav.custom-header a {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fefefe;
+    letter-spacing: 1px;
+    word-spacing: -3px;
+    text-decoration: none;
+    margin: 6px auto;
+  }
+  nav.custom-header a:hover {
+    color: #ffc700 !important;
+  }
+
+  @media only screen and (max-width: 768px) {
+    nav.custom-header a {
+      font-size: 1rem;
+      font-weight: 800;
+    }
+    #desktop-header {
+      display: none;
+    }
+    .rapid-header {
+      min-height: 240px !important;
+    }
+    .my-5 {
+      margin-top: 0 !important;
+    }
+    #logo-image-empty-homes-tax {
+      margin-top: 6px;
+      margin-bottom: 24px;
+    }
+    nav.custom-header {
+      border-radius: 0;
+    }
+  }
+  @media only screen and (min-width: 769px) {
+    #mobile-header {
+      display: none;
+    }
+  }
+
   footer.rapid-footer p:nth-child(2) {
     margin-bottom: 0;
   }
@@ -107,6 +160,17 @@ endcapture %} {% capture page_content %}
   <div class="col-lg-6">
     {% if page.signup.content.size > 0 %}
     <div id="intro" class="intro rapid-content mb-5">
+      <div id="mobile-header">
+        <nav class="row custom-header">
+          <a href="/calendar">Calendar</a>
+          <a href="/faq">FAQ</a>
+          <a
+            href="https://dsasf-62612.web.app/empty-homes-tax/Casas-Vacias-Hoja-de-Hechos.pdf"
+            target="_blank"
+            >Hoja de Hechos ➚</a
+          >
+        </nav>
+      </div>
       <img
         id="logo-image-empty-homes-tax"
         src="https://dsasf-62612.web.app/empty-homes-tax/title-plaque.png"
@@ -406,6 +470,18 @@ endcapture %} {% capture page_content %}
         {% include "social_slider_2" %}
       </div>
       {% endif %}
+    </div>
+    <div id="desktop-header">
+      <nav class="row custom-header">
+        <a href="/calendar">Calendar</a>
+        <a href="/faq">FAQ</a>
+        <a href="/endorsements">Supporters</a>
+        <a
+          href="https://dsasf-62612.web.app/empty-homes-tax/Casas-Vacias-Hoja-de-Hechos.pdf"
+          target="_blank"
+          >Hoja de Hechos ➚</a
+        >
+      </nav>
     </div>
     <a href="https://www.fillemptyhomes.com/donate">
       <img
