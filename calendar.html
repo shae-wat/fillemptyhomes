@@ -35,11 +35,11 @@
   }
 
   #logo-image-empty-homes-tax {
-    margin-bottom: 48px;
+    margin: 48px 0;
   }
 
-  .rapid-header {
-    min-height: 240px !important;
+  .rapid-header::after {
+    background: none;
   }
 
   .my-5 {
@@ -67,11 +67,20 @@
     margin-left: auto;
     margin-right: auto;
   }
+
   nav.custom-header a:hover {
     color: #ffc700 !important;
   }
 
+  .rapid-header {
+    min-height: 240px !important;
+  }
+
   @media only screen and (max-width: 768px) {
+    .rapid-header {
+      min-height: 140px !important;
+    }
+
     nav.custom-header a {
       font-size: 1rem;
       font-weight: 800;
