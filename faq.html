@@ -58,7 +58,7 @@
 
   nav.custom-header {
     position: relative;
-    background-color: #0075db;
+    background-color: #3e98a1;
     height: 3rem;
     display: flex;
     justify-content: center;
@@ -149,17 +149,7 @@ page_content %}
   width="100%"
 />
 
-<div class="row flex-row-reverse">
-  <div class="col-md-4">
-    <div class="box">
-      <div class="question-list btn-group-vertical w-100">
-        {% for child in page.children %} {% if child.type_name == 'Question' %}
-        <h3>{{ child.headline }}</h3>
-        {% endif %} {% endfor %}
-      </div>
-    </div>
-  </div>
-
+<div class="row">
   <div class="col-md-8 pt-4 pt-md-0">
     <ul class="list-unstyled mb-4 faq faq-{{ page.id }}">
       {% for child in page.children %}
@@ -191,6 +181,14 @@ page_content %}
         width="100%"
       />
     </a>
+  </div>
+
+  <div class="col-md-4">
+    <img
+      id="logo-image-empty-homes-tax"
+      src="https://dsasf-62612.web.app/empty-homes-tax/table-tax-schedule.png"
+      width="100%"
+    />
   </div>
 
   {% if page.tags_count > 0 %}
