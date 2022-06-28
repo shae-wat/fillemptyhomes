@@ -51,7 +51,7 @@
     margin-bottom: 24px;
   }
 
-  #logo-did-it {
+  #graphic-faq {
     margin: 1rem 0;
   }
 
@@ -66,7 +66,6 @@
 
   nav.custom-header {
     position: relative;
-    background-color: #3e98a1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,14 +78,10 @@
     text-align: center;
     font-size: 1.5rem;
     font-weight: 900;
-    color: #fefefe;
     letter-spacing: 1px;
     word-spacing: -3px;
     text-decoration: none;
     margin: 6px auto;
-  }
-  nav.custom-header a:hover {
-    color: #ffc700 !important;
   }
 
   @media only screen and (max-width: 768px) {
@@ -190,6 +185,12 @@ endcapture %} {% capture page_content %}
         size:16 %} Share
       </a>
     </div>
+
+    <img
+      id="graphic-faq"
+      src="https://dsasf-62612.web.app/empty-homes-tax/empty-sf-building.jpeg"
+      width="100%"
+    />
 
     {% if page.show_stream? %} {% include "page_stream" %} {% endif %}
   </div>
@@ -485,11 +486,17 @@ endcapture %} {% capture page_content %}
       href="https://www.fillemptyhomes.com/empty_homes_tax_turn_in_celebration"
     >
       <img
-        id="logo-did-it"
+        id="graphic-faq"
         src="https://dsasf-62612.web.app/empty-homes-tax/eht-did-it.png"
         width="100%"
       />
     </a>
+
+    <img
+      id="graphic-faq"
+      src="https://dsasf-62612.web.app/empty-homes-tax/sf-empty-10.png"
+      width="100%"
+    />
   </div>
 </div>
 {% endcapture %} {% include "content", sidebar: request.is_sidebar? %}
