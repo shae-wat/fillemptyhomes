@@ -47,6 +47,15 @@
     margin-right: auto;
   }
 
+  #intro {
+    margin: 0 64px 64px 0;
+  }
+
+  #intro p {
+    font-size: 112%;
+    color: #666;
+  }
+
   #logo-image-empty-homes-tax-donate {
     margin-top: 64px;
     margin-bottom: 48px;
@@ -139,9 +148,9 @@
 page_content %}
 
 <nav class="row custom-header">
-  <a href="/join">Join</a>
-  <a href="/calendar">Calendar</a>
-  <a href="/endorsements">Supporters</a>
+  <a href="/join">Unirse a la campaña</a>
+  <a href="/calendar">Calendario</a>
+  <a href="/endorsements">Partidarios</a>
 </nav>
 <img
   id="logo-image-empty-homes-tax"
@@ -151,6 +160,29 @@ page_content %}
 
 <div class="row">
   <div class="col-md-8 pt-4 pt-md-0">
+    <div id="intro">
+      <h2>
+        10% de las casas en San Francisco están vacías. Únase a nuestro
+        movimiento y hagamos algo al respecto.
+      </h2>
+      <p>
+        Más de 40,000 casas - casi 1 en 10 - están vacías en San Francisco,
+        mientras que 10,000 personas viven en las calles, y muchos otros tienen
+        que salir de la ciudad por la subida de los precios en renta. Es hora de
+        cambiar eso.
+      </p>
+      <p>
+        Únase a nosotros en nuestro esfuerzo histórico para aprobar un impuesto
+        de unidades vacantes en San Francisco para que podamos proporcionar a la
+        ciudad 5,000 viviendas nuevas y recaudar aproximadamente $38 millones
+        anuales para la prevención de personas sin hogar y viviendas asequibles.
+      </p>
+      <p>
+        Registrese para ser parte de nuestro movimiento para que podamos llenar
+        las casas vacías y luchar contra la interminable especulación
+        inmobiliaria que está aumentando el costo de vivienda.
+      </p>
+    </div>
     <ul class="list-unstyled mb-4 faq faq-{{ page.id }}">
       {% for child in page.children %}
       <li
@@ -190,6 +222,31 @@ page_content %}
       src="https://dsasf-62612.web.app/empty-homes-tax/table-tax-schedule.png"
       width="100%"
     />
+  </div>
+  <div class="col-lg-4 my-5 my-lg-0">
+    <h5 style="text-align: center;"><strong>Contactenos: </strong></h5>
+    <p style="text-align: center;">
+      <strong
+        ><a href="mailto:emptyhomestax@gmail.com"
+          >emptyhomestax@gmail.com</a
+        ></strong
+      >
+    </p>
+    <p style="text-align: center;"><strong>Llámenos al 415-493-8420</strong></p>
+    <p style="text-align: center;">
+      <span style="text-decoration: underline;"
+        >Pagado por Activate Housing FPPC ID 1443893. Comité de financiación
+        principal de:</span
+      ><br />1. Tenants and Owners Development Corporation y su identidad
+      affiliado Yerba Buena Neighborhood Consortium LLC ($55,000)<br />2. Dean
+      Preston ($20,000)<br />3.&nbsp;Jeff May ($8,980)<br /><span
+        style="text-decoration: underline;"
+        >Las divulgaciones financieras están disponibles en
+        <a rel="noopener" href="https://sfethics.org/" target="_blank"
+          >sfethics.org</a
+        ></span
+      >
+    </p>
   </div>
 
   {% if page.tags_count > 0 %}
