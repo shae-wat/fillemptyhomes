@@ -42,13 +42,15 @@
   }
 
   #graphic-faq {
-    margin: 48px 0;
+    margin: 48px 0 64px 0;
     margin-left: auto:
     margin-right: auto;
   }
 
-  #intro {
-    margin: 0 64px 64px 0;
+  #graphic-faq-p {
+    margin-top: -48px;
+    margin-left: auto:
+    margin-right: auto;
   }
 
   #intro p {
@@ -95,7 +97,20 @@
     min-height: 240px !important;
   }
 
+  #intro {
+    margin: 0 64px 64px 0;
+  }
+
   @media only screen and (max-width: 768px) {
+
+    #intro {
+      margin: 0 0 64px 0;
+    }
+
+    .desktop-only {
+      display: none;
+    }
+
     .rapid-header {
       min-height: 140px !important;
     }
@@ -103,6 +118,12 @@
     nav.custom-header a {
       font-size: 1rem;
       font-weight: 800;
+    }
+  }
+
+  @media only screen and (min-width: 769px) {
+    .mobile-only {
+      display: none;
     }
   }
 
@@ -183,6 +204,20 @@ page_content %}
         inmobiliaria que está aumentando el costo de vivienda.
       </p>
     </div>
+
+    <img
+      id="graphic-faq"
+      class="mobile-only"
+      src="https://dsasf-62612.web.app/empty-homes-tax/empty-sf-building.jpeg"
+      width="100%"
+    />
+    <p id="graphic-faq-p" class="mobile-only">
+      Un edificio de apartamentos de Mission Bay se encuentra con vacantes
+      claramente visibles
+    </p>
+    <br />
+    <br />
+
     <ul class="list-unstyled mb-4 faq faq-{{ page.id }}">
       {% for child in page.children %}
       <li
@@ -209,44 +244,19 @@ page_content %}
   <div class="col-md-4">
     <img
       id="graphic-faq"
+      class="desktop-only"
       src="https://dsasf-62612.web.app/empty-homes-tax/empty-sf-building.jpeg"
       width="100%"
     />
-    <img
-      id="graphic-faq"
-      src="https://dsasf-62612.web.app/empty-homes-tax/sf-empty-10.png"
-      width="100%"
-    />
+    <p id="graphic-faq-p" class="desktop-only">
+      Un edificio de apartamentos de Mission Bay se encuentra con vacantes
+      claramente visibles
+    </p>
     <img
       id="graphic-faq"
       src="https://dsasf-62612.web.app/empty-homes-tax/table-tax-schedule.png"
       width="100%"
     />
-  </div>
-  <div class="col-lg-4 my-5 my-lg-0">
-    <h5 style="text-align: center;"><strong>Contactenos: </strong></h5>
-    <p style="text-align: center;">
-      <strong
-        ><a href="mailto:emptyhomestax@gmail.com"
-          >emptyhomestax@gmail.com</a
-        ></strong
-      >
-    </p>
-    <p style="text-align: center;"><strong>Llámenos al 415-493-8420</strong></p>
-    <p style="text-align: center;">
-      <span style="text-decoration: underline;"
-        >Pagado por Activate Housing FPPC ID 1443893. Comité de financiación
-        principal de:</span
-      ><br />1. Tenants and Owners Development Corporation y su identidad
-      affiliado Yerba Buena Neighborhood Consortium LLC ($55,000)<br />2. Dean
-      Preston ($20,000)<br />3.&nbsp;Jeff May ($8,980)<br /><span
-        style="text-decoration: underline;"
-        >Las divulgaciones financieras están disponibles en
-        <a rel="noopener" href="https://sfethics.org/" target="_blank"
-          >sfethics.org</a
-        ></span
-      >
-    </p>
   </div>
 
   {% if page.tags_count > 0 %}
