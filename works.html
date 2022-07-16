@@ -1,18 +1,18 @@
 <style>
   a {
-    color: #0075db;
+    color: #2B3990;
   }
   h3,
   a:hover {
-    color: #1c7c8d !important;
+    color: #9A8ABB !important;
   }
 
   button.btn-primary,
   input.btn-primary,
   a.btn-primary {
     color: #000000;
-    background-color: #ffc700;
-    border-color: #ffc700;
+    background-color: #FFF200;
+    border-color: #FFF200;
   }
   button.btn-primary:hover,
   input.btn-primary:hover,
@@ -36,15 +36,12 @@
   }
 
   #logo-image-empty-homes-tax {
-    margin-top: 24px;
-    margin-bottom: 48px;
-    padding-right: 64px;
+    margin-top: -5rem;
+    margin-bottom: -2rem;
   }
 
-  #graphic-faq {
-    margin: 48px 0 64px 0;
-    margin-left: auto:
-    margin-right: auto;
+  .graphic-faq {
+    margin: 1rem auto;
   }
 
   #graphic-faq-p {
@@ -80,6 +77,7 @@
     justify-content: center;
     align-items: center;
     min-width: 100%;
+    z-index: 9999999;
   }
 
   nav.custom-header a {
@@ -99,6 +97,10 @@
 
   #intro {
     margin: 0 64px 64px 0;
+  }
+
+  .secondary-content {
+    margin-top: 64px;
   }
 
   @media only screen and (max-width: 768px) {
@@ -160,7 +162,7 @@
   footer.rapid-footer nav a {
     font-size: 1.5rem;
     font-weight: 900;
-    color: #0075db;
+    color: #2B3990;
     letter-spacing: 1px;
     text-decoration: none;
   }
@@ -174,19 +176,31 @@
 {% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
 page_content %}
 
-<nav class="row custom-header">
-  <a href="/join">Join</a>
-  <a href="/calendar">Calendar</a>
-  <a href="/endorsements">Supporters</a>
-</nav>
+<div class="desktop-only">
+  <nav class="row custom-header">
+    <a href="/join">Join</a>
+    <a href="/faq">FAQ</a>
+    <a href="/endorsements">Endorsers</a>
+    <a href="/donate">Donate</a>
+    <a href="/vacias">Traducción</a>
+  </nav>
+</div>
+<div class="mobile-only">
+  <nav class="row custom-header">
+    <a href="/faq">FAQ</a>
+    <a href="/endorsements">Endorsers</a>
+    <a href="/donate">Donate</a>
+    <a href="/vacias">Traducción</a>
+  </nav>
+</div>
 
 <div class="row">
-  <div class="col-md-8 pt-4 pt-md-0">
+  <div class="col-lg-7">
     <img
       id="logo-image-empty-homes-tax"
-      src="https://dsasf-62612.web.app/empty-homes-tax/title-plaque.png"
+      src="https://dsasf-62612.web.app/empty-homes-tax/logo-fill-empty-homes.png"
       width="100%"
-      alt="San Francisco Empty Homes Tax. The city has over 40,000 empty homes. Let's fill them."
+      alt="Fill Empty Homes. YES! on the Vacant Homes Tax"
     />
     <div class="rapid-content mb-5">
       <h2>
@@ -216,7 +230,7 @@ page_content %}
     <p>
       A Mission Bay apartment building sits with starkly visible vacancies
     </p>
-    <div class="rapid-content mb-5">
+    <div class="rapid-content mb-5 secondary-content">
       <p>
         <b>The Invisible Housing Crisis.</b> Our plan is to tax empty homes in
         buildings where there are three units or more. Multi-unit buildings,
@@ -242,10 +256,15 @@ page_content %}
         more vacant units held back from the market, the more fees they’ll pay.
       </p>
       <img
-        class="graphic-faq"
+        class="graphic-faq mobile-only"
         src="https://dsasf-62612.web.app/empty-homes-tax/table-tax-schedule.png"
-        width="60%"
-        style="margin-right: auto; margin-left: auto;"
+        width="100%"
+        alt="Tax table for the Empty Homes Tax: Tax increases by square footage yearly"
+      />
+      <img
+        class="graphic-faq desktop-only"
+        src="https://dsasf-62612.web.app/empty-homes-tax/table-tax-schedule.png"
+        width="70%"
         alt="Tax table for the Empty Homes Tax: Tax increases by square footage yearly"
       />
       <p>
@@ -269,11 +288,12 @@ page_content %}
       </p>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="col-lg-4 offset-lg-1">
     <img
       class="graphic-faq"
-      src="https://dsasf-62612.web.app/empty-homes-tax/one-oak-empty.jpg"
+      src="https://dsasf-62612.web.app/empty-homes-tax/one-oak-empty.png"
       width="100%"
+      style="margin-top: 48px;"
       alt="Photo looking up at building where every unit looks the same, nothing is on any porch or in any window, the building is completely empty"
     />
     <p>

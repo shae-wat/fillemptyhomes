@@ -1,127 +1,185 @@
 <style>
-  a {
-    color: #0075db;
-  }
-  a:hover {
-    color: #1c7c8d !important;
-  }
+    a {
+      color: #2B3990;
+    }
+    h2,
+    h3,
+    a:hover {
+      color: #9A8ABB !important;
+    }
 
-  .rapid-header::after {
-    background: none;
-  }
+    button.btn-primary,
+    input.btn-primary,
+    a.btn-primary {
+      color: #000000;
+      background-color: #FFF200;
+      border-color: #FFF200;
+    }
+    button.btn-primary:hover,
+    input.btn-primary:hover,
+    a.btn-primary:hover {
+      color: #ffffff;
+      background-color: #3e98a1;
+      border-color: #3e98a1;
+    }
 
-  button.btn-primary,
-  input.btn-primary,
-  a.btn-primary {
-    color: #000000;
-    background-color: #ffc700;
-    border-color: #ffc700;
-  }
-  button.btn-primary:hover,
-  input.btn-primary:hover,
-  a.btn-primary:hover {
-    color: #ffffff !important;
-    background-color: #3e98a1;
-    border-color: #3e98a1;
-  }
+    input.form-control:focus,
+    select:focus,
+    div.payment-input:focus {
+      border-color: #0086ff !important;
+    }
 
-  input.form-control:focus,
-  select:focus,
-  div.payment-input:focus {
-    border-color: #0086ff !important;
-  }
+    .custom-control-input:checked ~ .custom-control-label::before,
+    .custom-control-input:focus {
+      color: #fff;
+      border-color: #0086ff;
+      background-color: #0086ff;
+    }
 
-  .custom-control-input:checked ~ .custom-control-label::before,
-  .custom-control-input:focus {
-    color: #fff;
-    border-color: #0086ff;
-    background-color: #0086ff;
-  }
+    #logo-image-empty-homes-tax {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: auto;
+      margin-left: auto;
+    }
 
-  h2 {
-    color: #1c7c8d;
-  }
+    .graphic-faq {
+      margin: 1rem auto;
+    }
 
-  #logo-image-empty-homes-tax {
-    margin: 48px 0;
-  }
+    #graphic-faq-p {
+      margin-top: -48px;
+      margin-left: auto:
+      margin-right: auto;
+    }
 
-  .my-5 {
-    margin-top: 0 !important;
-  }
+    #intro p {
+      font-size: 112%;
+      color: #666;
+    }
 
-  nav.custom-header {
-    position: relative;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 100%;
-  }
+    #logo-image-empty-homes-tax-donate {
+      margin-top: 64px;
+      margin-bottom: 48px;
+      margin-left: auto:
+      margin-right: auto;
+    }
 
-  nav.custom-header a {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    word-spacing: -3px;
-    text-decoration: none;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .rapid-header::after {
+      background: none;
+    }
 
-  .rapid-header {
-    min-height: 240px !important;
-  }
+    .my-5 {
+      margin-top: 0 !important;
+    }
 
-  @media only screen and (max-width: 768px) {
-    .rapid-header {
-      min-height: 140px !important;
+    nav.custom-header {
+      position: relative;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 100%;
+      z-index: 9999999;
     }
 
     nav.custom-header a {
-      font-size: 1rem;
-      font-weight: 800;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      word-spacing: -3px;
+      text-decoration: none;
+      margin-left: auto;
+      margin-right: auto;
     }
-  }
 
-  .container li {
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 4px;
-  }
+    .rapid-header {
+      min-height: 240px !important;
+    }
 
-  footer.rapid-footer p:first-of-type a:first-of-type {
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-decoration: none;
-  }
+    #intro {
+      margin: 0 64px 64px 0;
+    }
 
-  footer.rapid-footer p:nth-child(2) {
-    margin-bottom: 0;
-  }
+    .secondary-content {
+      margin-top: 64px;
+    }
 
-  footer.rapid-footer p:nth-child(2) a:first-of-type {
-    font-size: 1rem;
-    color: #0067c2;
-    text-decoration: underline;
-  }
+    @media only screen and (max-width: 768px) {
 
-  footer.rapid-footer nav {
-    max-width: 100%;
-  }
+      #logo-image-empty-homes-tax {
+        margin-top: 0;
+        margin-bottom: 24px;
+        padding-right: 0;
+      }
 
-  footer.rapid-footer nav a {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #0075db;
-    letter-spacing: 1px;
-    text-decoration: none;
-  }
+      #intro {
+        margin: 0 0 64px 0;
+      }
 
-  footer.rapid-footer p {
-    font-size: 1rem;
-    color: #000000;
+      .desktop-only {
+        display: none;
+      }
+
+      .rapid-header {
+        min-height: 140px !important;
+      }
+
+      nav.custom-header a {
+        font-size: 1rem;
+        font-weight: 800;
+      }
+    }
+
+    @media only screen and (min-width: 769px) {
+      .mobile-only {
+        display: none;
+      }
+    }
+
+    div.question-list {
+      display: none;
+    }
+
+    footer.rapid-footer p:nth-child(2) {
+      margin-bottom: 0;
+    }
+
+    footer.rapid-footer p:first-of-type a:first-of-type {
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    footer.rapid-footer p:nth-child(2) a:first-of-type {
+      font-size: 1rem;
+      color: #0067c2;
+      text-decoration: underline;
+    }
+
+    footer.rapid-footer nav {
+      max-width: 100%;
+    }
+
+    footer.rapid-footer nav a {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #2B3990;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    footer.rapid-footer p {
+      font-size: 1rem;
+      color: #000000;
+    }
+
+    .container li {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
   }
 </style>
 

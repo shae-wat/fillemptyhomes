@@ -1,17 +1,18 @@
 <style>
   a {
-    color: #0075db;
+    color: #2B3990;
   }
+  h3,
   a:hover {
-    color: #1c7c8d !important;
+    color: #9A8ABB !important;
   }
 
   button.btn-primary,
   input.btn-primary,
   a.btn-primary {
     color: #000000;
-    background-color: #ffc700;
-    border-color: #ffc700;
+    background-color: #FFF200;
+    border-color: #FFF200;
   }
   button.btn-primary:hover,
   input.btn-primary:hover,
@@ -35,7 +36,30 @@
   }
 
   #logo-image-empty-homes-tax {
-    margin: 48px 0;
+    margin-top: -5rem;
+    margin-bottom: -2rem;
+  }
+
+  .graphic-faq {
+    margin: 1rem auto;
+  }
+
+  #graphic-faq-p {
+    margin-top: -48px;
+    margin-left: auto:
+    margin-right: auto;
+  }
+
+  #intro p {
+    font-size: 112%;
+    color: #666;
+  }
+
+  #logo-image-empty-homes-tax-donate {
+    margin-top: 64px;
+    margin-bottom: 48px;
+    margin-left: auto:
+    margin-right: auto;
   }
 
   .rapid-header::after {
@@ -53,6 +77,7 @@
     justify-content: center;
     align-items: center;
     min-width: 100%;
+    z-index: 9999999;
   }
 
   nav.custom-header a {
@@ -70,7 +95,30 @@
     min-height: 240px !important;
   }
 
+  #intro {
+    margin: 0 64px 64px 0;
+  }
+
+  .secondary-content {
+    margin-top: 64px;
+  }
+
   @media only screen and (max-width: 768px) {
+
+    #logo-image-empty-homes-tax {
+      margin-top: 0;
+      margin-bottom: 24px;
+      padding-right: 0;
+    }
+
+    #intro {
+      margin: 0 0 64px 0;
+    }
+
+    .desktop-only {
+      display: none;
+    }
+
     .rapid-header {
       min-height: 140px !important;
     }
@@ -79,6 +127,16 @@
       font-size: 1rem;
       font-weight: 800;
     }
+  }
+
+  @media only screen and (min-width: 769px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+
+  div.question-list {
+    display: none;
   }
 
   footer.rapid-footer p:nth-child(2) {
@@ -104,7 +162,7 @@
   footer.rapid-footer nav a {
     font-size: 1.5rem;
     font-weight: 900;
-    color: #0075db;
+    color: #2B3990;
     letter-spacing: 1px;
     text-decoration: none;
   }
@@ -118,16 +176,28 @@
 {% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
 page_content %}
 
-<nav class="row custom-header">
-  <a href="/faq">FAQ</a>
-  <a href="/endorsements">Supporters</a>
-  <a href="/vacias">Traducción</a>
-</nav>
-
+<div class="desktop-only">
+  <nav class="row custom-header">
+    <a href="/faq">FAQ</a>
+    <a href="/endorsements">Endorsers</a>
+    <a href="/works">How It Works</a>
+    <a href="/donate">Donate</a>
+    <a href="/vacias">Traducción</a>
+  </nav>
+</div>
+<div class="mobile-only">
+  <nav class="row custom-header">
+    <a href="/faq">FAQ</a>
+    <a href="/endorsements">Endorsers</a>
+    <a href="/donate">Donate</a>
+    <a href="/vacias">Traducción</a>
+  </nav>
+</div>
 <img
   id="logo-image-empty-homes-tax"
-  src="https://dsasf-62612.web.app/empty-homes-tax/banner-title.png"
-  width="100%"
+  src="https://dsasf-62612.web.app/empty-homes-tax/logo-fill-empty-homes.png"
+  width="50%"
+  alt="Fill Empty Homes. YES! on the Vacant Homes Tax"
 />
 {% if page.calendar.content.size > 0 %}
 <div id="intro" class="intro">
