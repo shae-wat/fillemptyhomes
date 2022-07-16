@@ -1,17 +1,21 @@
 <style>
   a {
-    color: #0075db;
+    color: #2b3990;
   }
   a:hover {
-    color: #1c7c8d !important;
+    color: #9a8abb !important;
+  }
+
+  .rapid-header {
+    display: none !important;
   }
 
   button.btn-primary,
   input.btn-primary,
   a.btn-primary {
     color: #000000;
-    background-color: #ffc700;
-    border-color: #ffc700;
+    background-color: #fff200;
+    border-color: #fff200;
   }
   button.btn-primary:hover,
   input.btn-primary:hover,
@@ -21,8 +25,12 @@
     border-color: #3e98a1;
   }
 
+  .custom-form-position {
+    margin-top: 24px;
+  }
+
   div.form {
-    background-color: #0075db;
+    background-color: #2b3990;
   }
 
   div.form p {
@@ -36,19 +44,19 @@
   input.form-control:focus,
   select:focus,
   div.payment-input:focus {
-    border-color: #ffc700 !important;
+    border-color: #fff200 !important;
   }
 
   .custom-control-input:checked ~ .custom-control-label::before,
   .custom-control-input:focus {
     color: #fff;
-    border-color: #ffc700;
-    background-color: #ffc700;
+    border-color: #fff200;
+    background-color: #fff200;
   }
 
   #logo-image-empty-homes-tax {
-    margin-top: -3rem;
-    margin-bottom: 24px;
+    margin-top: -5rem;
+    margin-bottom: -2rem;
   }
 
   .graphic-faq {
@@ -70,8 +78,9 @@
     justify-content: center;
     align-items: center;
     min-width: 100%;
-    border-radius: 0.3rem;
+    margin-top: -12px;
     padding: 3px;
+    z-index: 9999999;
   }
 
   nav.custom-header a {
@@ -84,30 +93,31 @@
     margin: 6px auto;
   }
 
+  .secondary-content {
+    margin-top: 64px;
+  }
+
   @media only screen and (max-width: 768px) {
     nav.custom-header a {
       font-size: 1rem;
       font-weight: 800;
     }
-    #desktop-header {
+    .desktop-only {
       display: none;
-    }
-    .rapid-header {
-      min-height: 240px !important;
     }
     .my-5 {
       margin-top: 0 !important;
     }
     #logo-image-empty-homes-tax {
-      margin-top: 6px;
-      margin-bottom: 24px;
+      margin-top: -4rem;
+      margin-bottom: -1rem;
     }
     nav.custom-header {
-      border-radius: 0;
+      margin-top: 6px;
     }
   }
   @media only screen and (min-width: 769px) {
-    #mobile-header {
+    .mobile-only {
       display: none;
     }
   }
@@ -135,7 +145,7 @@
   footer.rapid-footer nav a {
     font-size: 1.5rem;
     font-weight: 900;
-    color: #0075db;
+    color: #2b3990;
     letter-spacing: 1px;
     text-decoration: none;
   }
@@ -151,39 +161,53 @@ capture tags_list %}{{ tags_list }}{% unless forloop.first %},{% endunless%}{{
 tag.slug }}{% endcapture %} {% endfor %} {% assign tags_list = tags_list |
 split: "," %} {% endcapture %} {% capture page_headline %}{{ page.headline }}{%
 endcapture %} {% capture page_content %}
+<div class="desktop-only">
+  <nav class="row custom-header">
+    <a href="/faq">FAQ</a>
+    <a href="/endorsements">Endorsers</a>
+    <a href="/works">How It Works</a>
+    <a href="/donate">Donate</a>
+    <a href="/vacias">Traducción</a>
+  </nav>
+</div>
+<div class="mobile-only">
+  <nav class="row custom-header">
+    <a href="/faq">FAQ</a>
+    <a href="/endorsements">Endorsers</a>
+    <a href="/donate">Donate</a>
+    <a href="/vacias">Traducción</a>
+  </nav>
+</div>
+
 <div class="row">
-  <div class="col-lg-7">
-    <div id="intro" class="intro rapid-content mb-5">
-      <div id="mobile-header">
-        <nav class="row custom-header">
-          <a href="/calendar">Calendar</a>
-          <a href="/faq">FAQ</a>
-          <a href="/vacias">Traducción</a>
-        </nav>
-      </div>
+  <div class="col-lg-6">
+    <div id="intro" class="intro mb-5">
       <img
         id="logo-image-empty-homes-tax"
-        src="https://dsasf-62612.web.app/empty-homes-tax/title-plaque.png"
+        src="https://dsasf-62612.web.app/empty-homes-tax/logo-fill-empty-homes.png"
         width="100%"
-        alt="San Francisco Empty Homes Tax. The city has over 40,000 empty homes. Let's fill them."
+        alt="Fill Empty Homes. YES! on the Vacant Homes Tax"
       />
-      <div class="rapid-content mb-5">
-        <h2>
-          San Francisco has 40,000 empty homes, nearly 1 in 10 citywide.
-        </h2>
+      <div class="rapid-content">
+        <h3>
+          40,000 San Francisco homes sit empty. Join our movement and let’s do
+          something about that.
+        </h3>
         <p>
-          Many of these units are kept empty for profit-driven reasons with real
-          estate speculators using housing solely as an investment. The vast
-          majority of empty San Francisco homes are in buildings with more than
-          three units, and the buildings are in neighborhoods where the most
-          market-rate housing has been built recently: Downtown, SOMA, and
-          Mission Bay.
+          Over 40,000 homes — nearly 1 in 10 — sit empty in San Francisco while
+          10,000 folks live on the streets and countless others are priced out
+          of the city. It is time to change that.
         </p>
         <p>
-          Many San Franciscan’s pay exorbitant amounts of money for rent and
-          mortgages — leaving units empty only exacerbates the problem.
-          Meanwhile, we’ve all had close friends and family pushed out of the
-          city because of how expensive it is.
+          Join us in our historic effort to pass a Vacancy Tax in San Francisco
+          so we can provide the City with an estimated 4,500 new homes and raise
+          an estimated $38 million annually for homeless prevention and
+          affordable housing.
+        </p>
+        <p>
+          Sign up to be part of our movement so we can fill empty homes with
+          people and fight back against the endless real estate speculation that
+          is driving up the rent.
         </p>
       </div>
       <img
@@ -195,7 +219,7 @@ endcapture %} {% capture page_content %}
       <p>
         A Mission Bay apartment building sits with starkly visible vacancies
       </p>
-      <div class="rapid-content mb-5">
+      <div class="rapid-content mb-5 secondary-content">
         <h3>
           How the Empty Homes Tax Works
         </h3>
@@ -225,10 +249,15 @@ endcapture %} {% capture page_content %}
           pay.
         </p>
         <img
-          class="graphic-faq"
+          class="graphic-faq mobile-only"
           src="https://dsasf-62612.web.app/empty-homes-tax/table-tax-schedule.png"
-          width="60%"
-          style="margin-right: auto; margin-left: auto;"
+          width="100%"
+          alt="Tax table for the Empty Homes Tax: Tax increases by square footage yearly"
+        />
+        <img
+          class="graphic-faq desktop-only"
+          src="https://dsasf-62612.web.app/empty-homes-tax/table-tax-schedule.png"
+          width="70%"
           alt="Tax table for the Empty Homes Tax: Tax increases by square footage yearly"
         />
         <p>
@@ -273,8 +302,8 @@ endcapture %} {% capture page_content %}
     {% if page.show_stream? %} {% include "page_stream" %} {% endif %}
   </div>
 
-  <div class="col-lg-4 offset-lg-1">
-    <div class="rapid-form-wrap">
+  <div class="col-lg-5 offset-lg-1">
+    <div class="custom-form-position">
       <div
         class="form rapid-form mb-5 {% unless request.sorta_logged_in? %}d-lg-block"
         style="display:none{% endunless %}"
@@ -545,13 +574,6 @@ endcapture %} {% capture page_content %}
         {% include "social_slider_2" %}
       </div>
       {% endif %}
-    </div>
-    <div id="desktop-header">
-      <nav class="row custom-header">
-        <a href="/faq">FAQ</a>
-        <a href="/endorsements">Supporters</a>
-        <a href="/vacias">Traducción</a>
-      </nav>
     </div>
     <a href="https://www.fillemptyhomes.com/donate">
       <img

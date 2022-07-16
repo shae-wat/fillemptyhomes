@@ -1,0 +1,7 @@
+Yellow: #FFF200
+
+Smoked lavender: #9A8ABB
+
+Blue: #2B3990
+
+Gray: #CCCCCB
