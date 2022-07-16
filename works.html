@@ -1,0 +1,296 @@
+<style>
+  a {
+    color: #0075db;
+  }
+  h3,
+  a:hover {
+    color: #1c7c8d !important;
+  }
+
+  button.btn-primary,
+  input.btn-primary,
+  a.btn-primary {
+    color: #000000;
+    background-color: #ffc700;
+    border-color: #ffc700;
+  }
+  button.btn-primary:hover,
+  input.btn-primary:hover,
+  a.btn-primary:hover {
+    color: #ffffff;
+    background-color: #3e98a1;
+    border-color: #3e98a1;
+  }
+
+  input.form-control:focus,
+  select:focus,
+  div.payment-input:focus {
+    border-color: #0086ff !important;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before,
+  .custom-control-input:focus {
+    color: #fff;
+    border-color: #0086ff;
+    background-color: #0086ff;
+  }
+
+  #logo-image-empty-homes-tax {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    padding-right: 64px;
+  }
+
+  #graphic-faq {
+    margin: 48px 0 64px 0;
+    margin-left: auto:
+    margin-right: auto;
+  }
+
+  #graphic-faq-p {
+    margin-top: -48px;
+    margin-left: auto:
+    margin-right: auto;
+  }
+
+  #intro p {
+    font-size: 112%;
+    color: #666;
+  }
+
+  #logo-image-empty-homes-tax-donate {
+    margin-top: 64px;
+    margin-bottom: 48px;
+    margin-left: auto:
+    margin-right: auto;
+  }
+
+  .rapid-header::after {
+    background: none;
+  }
+
+  .my-5 {
+    margin-top: 0 !important;
+  }
+
+  nav.custom-header {
+    position: relative;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+  }
+
+  nav.custom-header a {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    word-spacing: -3px;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rapid-header {
+    min-height: 240px !important;
+  }
+
+  #intro {
+    margin: 0 64px 64px 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    #logo-image-empty-homes-tax {
+      margin-top: 0;
+      margin-bottom: 24px;
+      padding-right: 0;
+    }
+
+    #intro {
+      margin: 0 0 64px 0;
+    }
+
+    .desktop-only {
+      display: none;
+    }
+
+    .rapid-header {
+      min-height: 140px !important;
+    }
+
+    nav.custom-header a {
+      font-size: 1rem;
+      font-weight: 800;
+    }
+  }
+
+  @media only screen and (min-width: 769px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+
+  div.question-list {
+    display: none;
+  }
+
+  footer.rapid-footer p:nth-child(2) {
+    margin-bottom: 0;
+  }
+
+  footer.rapid-footer p:first-of-type a:first-of-type {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  footer.rapid-footer p:nth-child(2) a:first-of-type {
+    font-size: 1rem;
+    color: #0067c2;
+    text-decoration: underline;
+  }
+
+  footer.rapid-footer nav {
+    max-width: 100%;
+  }
+
+  footer.rapid-footer nav a {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #0075db;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+
+  footer.rapid-footer p {
+    font-size: 1rem;
+    color: #000000;
+  }
+</style>
+
+{% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
+page_content %}
+
+<nav class="row custom-header">
+  <a href="/join">Join</a>
+  <a href="/calendar">Calendar</a>
+  <a href="/endorsements">Supporters</a>
+</nav>
+
+<div class="row">
+  <div class="col-md-8 pt-4 pt-md-0">
+    <img
+      id="logo-image-empty-homes-tax"
+      src="https://dsasf-62612.web.app/empty-homes-tax/title-plaque.png"
+      width="100%"
+      alt="San Francisco Empty Homes Tax. The city has over 40,000 empty homes. Let's fill them."
+    />
+    <div class="rapid-content mb-5">
+      <h2>
+        San Francisco has 40,000 empty homes, nearly 1 in 10 citywide.
+      </h2>
+      <p>
+        Many of these units are kept empty for profit-driven reasons with real
+        estate speculators using housing solely as an investment. The vast
+        majority of empty San Francisco homes are in buildings with more than
+        three units, and the buildings are in neighborhoods where the most
+        market-rate housing has been built recently: Downtown, SOMA, and Mission
+        Bay.
+      </p>
+      <p>
+        Many San Franciscan’s pay exorbitant amounts of money for rent and
+        mortgages — leaving units empty only exacerbates the problem. Meanwhile,
+        we’ve all had close friends and family pushed out of the city because of
+        how expensive it is.
+      </p>
+    </div>
+    <img
+      class="graphic-faq"
+      src="https://dsasf-62612.web.app/empty-homes-tax/empty-sf-building.jpeg"
+      width="100%"
+      alt="Photograph of modern development building with several units that do not have furniture or porch items"
+    />
+    <p>
+      A Mission Bay apartment building sits with starkly visible vacancies
+    </p>
+    <div class="rapid-content mb-5">
+      <p>
+        <b>The Invisible Housing Crisis.</b> Our plan is to tax empty homes in
+        buildings where there are three units or more. Multi-unit buildings,
+        especially those owned by corporate landlords, are the largest source of
+        the vacancy problem.
+      </p>
+      <img
+        class="graphic-faq"
+        src="https://dsasf-62612.web.app/empty-homes-tax/vacancies-type-pie.png"
+        width="100%"
+        alt="SF's 40,000 vacant housing units, by type of building: 33% in buildings with 50+ units, 28% in building with 5-49 units, 13% in triples or fourplex, 15% in single-family homes, 8% in duplexes"
+      />
+      <p>
+        <b>How The Empty Homes Tax Will Help:</b> A vacancy tax based on the
+        square footage of a unit plus how many years it has been left vacant
+        will fill currently empty units. The tax will get more housing units
+        back on the market — where they rent quickly in San Francisco — and out
+        of the pockets of corporate landlords hoarding multiple vacancies in
+        large apartment complexes solely as investments. Using the housing
+        infrastructure of the city solely for profit goes against the interest
+        of housing everyone and can be deterred with an empty homes tax.
+        Investment speculators are the main target of the Empty Homes Tax: the
+        more vacant units held back from the market, the more fees they’ll pay.
+      </p>
+      <img
+        class="graphic-faq"
+        src="https://dsasf-62612.web.app/empty-homes-tax/table-tax-schedule.png"
+        width="60%"
+        style="margin-right: auto; margin-left: auto;"
+        alt="Tax table for the Empty Homes Tax: Tax increases by square footage yearly"
+      />
+      <p>
+        <b>Less vacancies = more housing.</b> The city’s Budget and Legislative
+        Analyst estimates that the Empty Homes Tax will put 4,500 empty units
+        back on the market — immediately. That’s thousands of units online
+        without construction or wait time, some in rent controlled buildings.
+      </p>
+      <p>
+        <b>More money for affordable housing.</b> For the landlords who opt to
+        pay for the tax, it is estimated that the tax will raise $38 million
+        annually to be split between the acquisition of more affordable housing
+        and rental subsidies for low-income families and seniors. These funds
+        are desperately needed to build housing for working class communities of
+        color.
+      </p>
+      <p>
+        Our affordability crisis makes it impossible for working people, artists
+        and families to make it in the city we call home and love. Let’s fill
+        empty homes by passing our vacancy tax in November!
+      </p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <img
+      class="graphic-faq"
+      src="https://dsasf-62612.web.app/empty-homes-tax/one-oak-empty.jpg"
+      width="100%"
+      alt="Photo looking up at building where every unit looks the same, nothing is on any porch or in any window, the building is completely empty"
+    />
+    <p>
+      The Oak, a 109 unit building on Market St, is reported to be 100% vacant
+      over a year after completion
+    </p>
+  </div>
+
+  {% if page.tags_count > 0 %}
+  <div class="mt-4">
+    {% include "page_tags" with page %}
+  </div>
+  {% endif %} {% if page.show_stream? %}
+  <div class="mt-4">
+    {% include "page_stream" %}
+  </div>
+  {% endif %}
+</div>
+
+{% endcapture %} {% include "content", sidebar: request.is_sidebar? %}

@@ -51,8 +51,8 @@
     margin-bottom: 24px;
   }
 
-  #graphic-faq {
-    margin: 1rem 0;
+  .graphic-faq {
+    margin: 1rem auto;
   }
 
   .rapid-header::after {
@@ -152,8 +152,7 @@ tag.slug }}{% endcapture %} {% endfor %} {% assign tags_list = tags_list |
 split: "," %} {% endcapture %} {% capture page_headline %}{{ page.headline }}{%
 endcapture %} {% capture page_content %}
 <div class="row">
-  <div class="col-lg-6">
-    {% if page.signup.content.size > 0 %}
+  <div class="col-lg-7">
     <div id="intro" class="intro rapid-content mb-5">
       <div id="mobile-header">
         <nav class="row custom-header">
@@ -168,9 +167,93 @@ endcapture %} {% capture page_content %}
         width="100%"
         alt="San Francisco Empty Homes Tax. The city has over 40,000 empty homes. Let's fill them."
       />
-      {{ page.signup.content }}
+      <div class="rapid-content mb-5">
+        <h2>
+          San Francisco has 40,000 empty homes, nearly 1 in 10 citywide.
+        </h2>
+        <p>
+          Many of these units are kept empty for profit-driven reasons with real
+          estate speculators using housing solely as an investment. The vast
+          majority of empty San Francisco homes are in buildings with more than
+          three units, and the buildings are in neighborhoods where the most
+          market-rate housing has been built recently: Downtown, SOMA, and
+          Mission Bay.
+        </p>
+        <p>
+          Many San Franciscan’s pay exorbitant amounts of money for rent and
+          mortgages — leaving units empty only exacerbates the problem.
+          Meanwhile, we’ve all had close friends and family pushed out of the
+          city because of how expensive it is.
+        </p>
+      </div>
+      <img
+        class="graphic-faq"
+        src="https://dsasf-62612.web.app/empty-homes-tax/empty-sf-building.jpeg"
+        width="100%"
+        alt="Photograph of modern development building with several units that do not have furniture or porch items"
+      />
+      <p>
+        A Mission Bay apartment building sits with starkly visible vacancies
+      </p>
+      <div class="rapid-content mb-5">
+        <h3>
+          How the Empty Homes Tax Works
+        </h3>
+        <p>
+          <b>The Invisible Housing Crisis.</b> Our plan is to tax empty homes in
+          buildings where there are three units or more. Multi-unit buildings,
+          especially those owned by corporate landlords, are the largest source
+          of the vacancy problem.
+        </p>
+        <img
+          class="graphic-faq"
+          src="https://dsasf-62612.web.app/empty-homes-tax/vacancies-type-pie.png"
+          width="100%"
+          alt="SF's 40,000 vacant housing units, by type of building: 33% in buildings with 50+ units, 28% in building with 5-49 units, 13% in triples or fourplex, 15% in single-family homes, 8% in duplexes"
+        />
+        <p>
+          <b>How The Empty Homes Tax Will Help:</b> A vacancy tax based on the
+          square footage of a unit plus how many years it has been left vacant
+          will fill currently empty units. The tax will get more housing units
+          back on the market — where they rent quickly in San Francisco — and
+          out of the pockets of corporate landlords hoarding multiple vacancies
+          in large apartment complexes solely as investments. Using the housing
+          infrastructure of the city solely for profit goes against the interest
+          of housing everyone and can be deterred with an empty homes tax.
+          Investment speculators are the main target of the Empty Homes Tax: the
+          more vacant units held back from the market, the more fees they’ll
+          pay.
+        </p>
+        <img
+          class="graphic-faq"
+          src="https://dsasf-62612.web.app/empty-homes-tax/table-tax-schedule.png"
+          width="60%"
+          style="margin-right: auto; margin-left: auto;"
+          alt="Tax table for the Empty Homes Tax: Tax increases by square footage yearly"
+        />
+        <p>
+          <b>Less vacancies = more housing.</b> The city’s Budget and
+          Legislative Analyst estimates that the Empty Homes Tax will put 4,500
+          empty units back on the market — immediately. That’s thousands of
+          units online without construction or wait time, some in rent
+          controlled buildings.
+        </p>
+        <p>
+          <b>More money for affordable housing.</b> For the landlords who opt to
+          pay for the tax, it is estimated that the tax will raise $38 million
+          annually to be split between the acquisition of more affordable
+          housing and rental subsidies for low-income families and seniors.
+          These funds are desperately needed to build housing for working class
+          communities of color.
+        </p>
+        <p>
+          Our affordability crisis makes it impossible for working people,
+          artists and families to make it in the city we call home and love.
+          Let’s fill empty homes by passing our vacancy tax in November!
+        </p>
+      </div>
     </div>
-    {% endif %} {% if page.tags_count > 0 %}
+    {% if page.tags_count > 0 %}
     <div id="page-tags" class="page-tags mb-5">
       {% include "page_tags" with page %}
     </div>
@@ -187,20 +270,10 @@ endcapture %} {% capture page_content %}
       </a>
     </div>
 
-    <img
-      id="graphic-faq"
-      src="https://dsasf-62612.web.app/empty-homes-tax/empty-sf-building.jpeg"
-      width="100%"
-      alt="Photograph of modern development building with several units that do not have furniture or porch items"
-    />
-    <p>
-      A Mission Bay apartment building sits with starkly visible vacancies
-    </p>
-
     {% if page.show_stream? %} {% include "page_stream" %} {% endif %}
   </div>
 
-  <div class="col-lg-5 offset-lg-1">
+  <div class="col-lg-4 offset-lg-1">
     <div class="rapid-form-wrap">
       <div
         class="form rapid-form mb-5 {% unless request.sorta_logged_in? %}d-lg-block"
@@ -488,24 +561,16 @@ endcapture %} {% capture page_content %}
         alt="Donate button"
       />
     </a>
-
     <img
-      id="graphic-faq"
-      src="https://dsasf-62612.web.app/empty-homes-tax/eht-did-it.jpg"
+      class="graphic-faq"
+      src="https://dsasf-62612.web.app/empty-homes-tax/one-oak-empty.jpg"
       width="100%"
-      alt="Photo of Empty Homes Tax campaign volunteers in front of City Hall celebrating the collection of 13,734 signatures to put the measure on the ballot"
+      alt="Photo looking up at building where every unit looks the same, nothing is on any porch or in any window, the building is completely empty"
     />
     <p>
-      We turned in 13,734 signatures to the San Francisco Department of
-      Elections 📚📚
+      The Oak, a 109 unit building on Market St, is reported to be 100% vacant
+      over a year after completion
     </p>
-
-    <img
-      id="graphic-faq"
-      src="https://dsasf-62612.web.app/empty-homes-tax/sf-empty-10.png"
-      width="100%"
-      alt="Graphic of San Francisco map, 10% is not shaded and the graphic reads Ten percent of San Francisco Homes are left empty"
-    />
   </div>
 </div>
 {% endcapture %} {% include "content", sidebar: request.is_sidebar? %}
