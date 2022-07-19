@@ -1,17 +1,17 @@
 <style>
   a {
-    color: #2B3990;
+    color: #2b3990;
   }
   a:hover {
-    color: #9A8ABB !important;
+    color: #9a8abb !important;
   }
 
   button.btn-primary,
   input.btn-primary,
   a.btn-primary {
     color: #000000;
-    background-color: #FFF200;
-    border-color: #FFF200;
+    background-color: #fff200;
+    border-color: #fff200;
   }
   button.btn-primary:hover,
   input.btn-primary:hover,
@@ -75,7 +75,7 @@
   }
 
   nav.custom-header a:hover {
-    color: #FFF200 !important;
+    color: #fff200 !important;
   }
 
   .rapid-header {
@@ -83,6 +83,10 @@
   }
 
   @media only screen and (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
+
     .rapid-header {
       min-height: 140px !important;
     }
@@ -90,6 +94,11 @@
     nav.custom-header a {
       font-size: 1rem;
       font-weight: 800;
+    }
+  }
+  @media only screen and (min-width: 769px) {
+    .mobile-only {
+      display: none;
     }
   }
 
@@ -116,7 +125,7 @@
   footer.rapid-footer nav a {
     font-size: 1.5rem;
     font-weight: 900;
-    color: #2B3990;
+    color: #2b3990;
     letter-spacing: 1px;
     text-decoration: none;
   }
@@ -129,16 +138,29 @@
 
 {% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
 page_content %}
-<nav class="row custom-header">
-  <a href="/faq">FAQ</a>
-  <a href="/endorsements">Supporters</a>
-  <a href="/vacias">Traducción</a>
-</nav>
+<div class="desktop-only">
+  <nav class="row custom-header">
+    <a href="/join">Join</a>
+    <a href="/endorsements">Endorsers</a>
+    <a href="/works">How It Works</a>
+    <a href="/donate">Donate</a>
+    <a href="/vacias">Traducción</a>
+  </nav>
+</div>
+<div class="mobile-only">
+  <nav class="row custom-header">
+    <a href="/join">Join</a>
+    <a href="/faq">FAQ</a>
+    <a href="/donate">Donate</a>
+    <a href="/vacias">Traducción</a>
+  </nav>
+</div>
 <div id="content">
   <img
     id="logo-image-empty-homes-tax"
-    src="https://dsasf-62612.web.app/empty-homes-tax/banner-title.png"
-    width="100%"
+    src="https://dsasf-62612.web.app/empty-homes-tax/logo-fill-empty-homes.png"
+    width="70%"
+    alt="Fill Empty Homes. YES! on the Vacant Homes Tax"
   />
   {% if page.event.content.size > 0 %}
   <div id="intro" class="intro">
