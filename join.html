@@ -6,130 +6,123 @@
   a:hover {
     color: #9a8abb !important;
   }
-
-  .rapid-header {
-    display: none !important;
-  }
-
-  .rapid-form {
-    margin-top: 36px !important;
-    margin-bottom: 0 !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .form-errors .errorExplanation h2,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   }
 
   button.btn-primary,
   input.btn-primary,
   a.btn-primary {
     color: #000000;
-    background-color: #fff200;
-    border-color: #fff200;
+    background-color: #2b3990;
+    border-color: #2b3990;
   }
   button.btn-primary:hover,
   input.btn-primary:hover,
   a.btn-primary:hover {
     color: #ffffff !important;
-    background-color: #3e98a1;
-    border-color: #3e98a1;
+    background-color: #9a8abb;
+    border-color: #9a8abb;
   }
 
-  .custom-form-position {
-    margin-top: 24px;
-  }
-
-  div.form {
-    background-color: #2b3990;
-  }
-
-  div.form p {
-    color: #ffffff;
-  }
-
-  div.form label {
-    color: #ededed !important;
-  }
-
-  input.form-control:focus,
-  select:focus,
-  div.payment-input:focus {
-    border-color: #fff200 !important;
-  }
-
-  .custom-control-input:checked ~ .custom-control-label::before,
-  .custom-control-input:focus {
-    color: #fff;
-    border-color: #fff200;
-    background-color: #fff200;
-  }
-
-  #logo-image-empty-homes-tax {
-    margin-top: 24px;
+  .header-image {
+    margin-top: 0;
     margin-bottom: 24px;
   }
 
-  .graphic-faq {
-    margin: 1rem auto;
+  .nav-item-login {
+    display: none;
   }
 
-  .graphic-faq-p {
-    margin-top: -48px;
-    margin-left: auto:
-    margin-right: auto;
+  .navbar-nav-primary {
+    margin-right: 12px;
   }
 
-  .rapid-header::after {
-    background: none;
-  }
-
-  #donate-image-empty-homes-tax {
-    margin-top: 48px;
-    margin-bottom: 24px;
-  }
-
-  nav.custom-header {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 100%;
-    margin-top: -12px;
-    margin-bottom: 12px;
-    padding: 3px;
-    z-index: 9999999;
-  }
-
-  nav.custom-header a {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    word-spacing: -3px;
-    text-decoration: none;
-    margin: 6px auto;
+  .nav-link {
+    margin-right: 36px;
   }
 
   .secondary-content {
     margin-top: 64px;
   }
 
+  .graphic-content {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .card {
+    padding: 24px;
+    margin-bottom: 48px;
+  }
+
+  .card-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #custom-checkbox {
+    display: none;
+  }
+
+  .title-block {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .title-yes {
+    font-weight: 900;
+  }
+
+  .title-for {
+    margin-top: -16px;
+    font-weight: 900;
+  }
+
+  .title-nov {
+    margin-top: 12px;
+    color: #666;
+  }
+
+  .title-cons {
+    margin-top: 6px;
+    color: #666;
+  }
+
+  .custom-control {
+    display: none;
+  }
+
   @media only screen and (max-width: 768px) {
-    nav.custom-header a {
-      font-size: 1rem;
-      font-weight: 800;
-    }
     .desktop-only {
       display: none;
     }
-    .my-5 {
-      margin-top: 0 !important;
-    }
-    #logo-image-empty-homes-tax {
-      margin-top: 24px;
+    .header-image {
+      margin-top: 0;
       margin-bottom: 6px;
       margin-right: auto;
       margin-left: auto;
-      width: 70vw;
     }
-    nav.custom-header {
-      margin-top: 6px;
+    .title-for {
+      margin-top: -8px;
+      line-height: 1;
+    }
+    .card-row {
+      flex-direction: column;
     }
   }
   @media only screen and (min-width: 769px) {
@@ -137,468 +130,285 @@
       display: none;
     }
   }
-
-  footer.rapid-footer p:nth-child(2) {
-    margin-bottom: 0;
-  }
-
-  footer.rapid-footer p:first-of-type a:first-of-type {
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-decoration: none;
-  }
-
-  footer.rapid-footer p:nth-child(2) a:first-of-type {
-    font-size: 1rem;
-    color: #0067c2;
-    text-decoration: underline;
-  }
-
-  footer.rapid-footer nav {
-    max-width: 100%;
-  }
-
-  footer.rapid-footer nav a {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #2b3990;
-    letter-spacing: 1px;
-    text-decoration: none;
-  }
-
-  footer.rapid-footer p {
-    font-size: 1rem;
-    color: #000000;
-  }
 </style>
 
-{% capture vars %} {% assign tags_list = "" %} {% for tag in page.tags %} {%
-capture tags_list %}{{ tags_list }}{% unless forloop.first %},{% endunless%}{{
-tag.slug }}{% endcapture %} {% endfor %} {% assign tags_list = tags_list |
-split: "," %} {% endcapture %} {% capture page_headline %}{{ page.headline }}{%
-endcapture %} {% capture page_content %}
-<div class="desktop-only">
-  <nav class="row custom-header">
-    <a href="/works">How It Works</a>
-    <a href="/faq">FAQ</a>
-    <a href="/endorsements">Endorsements</a>
-    <a href="/vacias">¡SÍ a la M!</a>
-    <a href="/donate">Donate</a>
-  </nav>
-</div>
-
-<div class="row">
-  <div class="col-lg-6">
-    <div id="intro" class="intro mb-5">
-      <img
-        id="logo-image-empty-homes-tax"
-        src="https://dsasf-62612.web.app/empty-homes-tax/logo-fill-empty-homes.png"
-        width="100%"
-        alt="Fill Empty Homes. YES! on the Vacant Homes Tax"
-      />
-      <div class="mobile-only">
-        <nav class="row custom-header">
-          <a href="/faq">FAQ</a>
-          <a href="/endorsements">Endorsements</a>
-          <a href="/donate">Donate</a>
-        </nav>
+<div class="page">
+  {% include "breadcrumbs" %}
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div style="margin: auto; margin-bottom: 48px;">
+        <img
+          id="logo-image-empty-homes-tax"
+          src="https://dsasf-62612.web.app/empty-homes-tax/banner-title.png"
+          width="100%"
+          alt="Fill Empty Homes. YES! on the Vacant Homes Tax"
+        />
       </div>
-      <div class="rapid-content">
-        <h3>
+    </div>
+    <div class="col-lg-8">
+      <strong
+        ><h4>
           San Francisco needs Prop M. 40,000 homes sit empty. Join our movement
           and let’s do something about that.
-        </h3>
-        <p>
-          Over 40,000 homes — nearly 1 in 10 — sit empty in San Francisco while
-          8,000 folks live on the streets and thousands more are priced out of
-          the city. We need to pass Prop M this November so we can change that.
-        </p>
-        <p>
-          Join us in our historic effort to pass a Vacancy Tax in San Francisco
-          so we can provide the City with an estimated 4,500 new homes and raise
-          an estimated $38 million annually for homeless prevention and
-          affordable housing.
-        </p>
-        <p>
-          Sign up to be part of our movement so we can fill empty homes with
-          people and fight back against the endless real estate speculation that
-          is driving up the rent.
-        </p>
+        </h4></strong
+      >
+      <p>
+        Over 40,000 homes — nearly 1 in 10 — sit empty in San Francisco while
+        8,000 folks live on the streets and thousands more are priced out of the
+        city. We need to pass Prop M this November so we can change that.
+      </p>
+      <p>
+        Join us in our historic effort to pass a Vacancy Tax in San Francisco so
+        we can provide the City with an estimated 4,500 new homes and raise an
+        estimated $38 million annually for homeless prevention and affordable
+        housing.
+      </p>
+      <h4 class="title-cons">
+        <strong
+          >Moving city elections to even years is proudly endorsed by:</strong
+        >
+      </h4>
+      <div class="card">
+        <div class="card-row">
+          <img
+            class="graphic-content"
+            src="https://dsasf-62612.web.app/up-vote/endorsements/logo-sf-dem-party.png"
+            alt="San Francisco Democratic Party"
+            width="200px"
+            height="auto"
+          />
+          <img
+            class="graphic-content"
+            src="https://dsasf-62612.web.app/up-vote/endorsements/logo-sierra-club.png"
+            alt="Sierra Club"
+            width="200px"
+            height="auto"
+          />
+        </div>
+        <div class="card-row">
+          <img
+            class="graphic-content"
+            src="https://dsasf-62612.web.app/up-vote/endorsements/logo-milk.png"
+            alt="Harvey Milk LGBTQ Democratic Club"
+            width="224px"
+            height="auto"
+          />
+          <img
+            class="graphic-content"
+            src="https://dsasf-62612.web.app/up-vote/endorsements/logo-sfwpc.png"
+            alt="San Francisco Women’s Political Committee"
+            width="224px"
+            height="auto"
+          />
+          <img
+            class="graphic-content"
+            src="https://dsasf-62612.web.app/up-vote/endorsements/logo-sflc.png"
+            alt="San Francisco Labor Council"
+            width="224px"
+            height="auto"
+          />
+        </div>
       </div>
+      <p>
+        ● How Prop M Works
+      </p>
+      <p>
+        The Invisible Housing Crisis. Our plan is to tax vacancies in buildings
+        with three or more units. Multi-unit buildings — especially those owned
+        by corporate landlords — are the biggest source of the vacancy problem.
+      </p>
+      <p>
+        ● How The Empty Homes Tax Will Help
+      </p>
+      <p>
+        The vacancy tax is based on the square footage of a unit plus how many
+        years it has been left vacant. The tax will get more housing units back
+        on the market — where they rent quickly in San Francisco — and out of
+        the pockets of corporate landlords hoarding multiple vacancies in large
+        apartment complexes. Investment speculators are the main target of the
+        Empty Homes Tax: the more vacant units held back from the market, the
+        more fees.
+      </p>
+      <br />
       <img
-        class="graphic-faq"
+        class="header-image"
         src="https://dsasf-62612.web.app/empty-homes-tax/empty-sf-building.jpeg"
-        width="100%"
         alt="Photograph of modern development building with several units that do not have furniture or porch items"
       />
       <p>
         A Mission Bay apartment building sits with starkly visible vacancies
       </p>
-      <div class="rapid-content mb-5 secondary-content">
-        <h3 style="color: #9a8abb;">
-          How Prop M Works
-        </h3>
-        <p>
-          <b>The Invisible Housing Crisis.</b> Our plan is to tax vacancies in
-          buildings with three or more units. Multi-unit buildings — especially
-          those owned by corporate landlords — are the biggest source of the
-          vacancy problem.
-        </p>
+      <br />
+      <p>
+        <strong>Less vacancies = more housing.</strong>
+        The city’s Budget and Legislative Analyst estimates that the Empty Homes
+        Tax will immediately put 4,500 empty units back on the market. That’s
+        thousands of units online without construction or wait time — some in
+        rent controlled buildings.
+      </p>
+      <p>
+        <strong>More money for affordable housing.</strong>
+        For the landlords who opt to pay for the tax, it is estimated that the
+        tax will raise $38 million annually to be split between the acquisition
+        of more affordable housing and rental subsidies for low-income families
+        and seniors. These funds are desperately needed to build housing for
+        working class communities of color.
+      </p>
+      <br />
+      <a href="https://www.upthevotesf.com/donate">
         <img
-          class="graphic-faq"
-          src="https://dsasf-62612.web.app/empty-homes-tax/vacancies-type-pie.png"
+          id="logo-image-empty-homes-tax"
+          src="https://dsasf-62612.web.app/empty-homes-tax/banner-donate.png"
           width="100%"
-          alt="SF's 40,000 vacant housing units, by type of building: 33% in buildings with 50+ units, 28% in building with 5-49 units, 13% in triples or fourplex, 15% in single-family homes, 8% in duplexes"
+          alt="Donate to help us hit our goal!"
         />
-        <p>
-          <b>How Prop M Will Help:</b> The vacancy tax is based on the square
-          footage of a unit plus how many years it has been left vacant. The tax
-          will get more housing units back on the market — where they rent
-          quickly in San Francisco — and out of the pockets of corporate
-          landlords hoarding multiple vacancies in large apartment complexes.
-          Investment speculators are the main target of the Empty Homes Tax: the
-          more vacant units held back from the market, the more fees.
-        </p>
-        <img
-          class="graphic-faq mobile-only"
-          src="https://dsasf-62612.web.app/empty-homes-tax/table-tax-schedule.png"
-          width="100%"
-          alt="Tax table for the Empty Homes Tax: Tax increases by square footage yearly"
-        />
-        <img
-          class="graphic-faq desktop-only"
-          src="https://dsasf-62612.web.app/empty-homes-tax/table-tax-schedule.png"
-          width="70%"
-          alt="Tax table for the Empty Homes Tax: Tax increases by square footage yearly"
-        />
-        <p>
-          <b>Less vacancies = more housing.</b> The city’s Budget and
-          Legislative Analyst estimates that the Empty Homes Tax will
-          immediately put 4,500 empty units back on the market. That’s thousands
-          of units online without construction or wait time — some in rent
-          controlled buildings.
-        </p>
-        <p>
-          <b>More money for affordable housing.</b> For the landlords who opt to
-          pay for the tax, it is estimated that the tax will raise $38 million
-          annually to be split between the acquisition of more affordable
-          housing and rental subsidies for low-income families and seniors.
-          These funds are desperately needed to build housing for working class
-          communities of color.
-        </p>
-        <p>
-          Our affordability crisis makes it impossible for working people,
-          artists and families to make it in the city we call home and love.
-          Let’s fill empty homes by passing Prop M in November!
-        </p>
-      </div>
-    </div>
-    {% if page.tags_count > 0 %}
-    <div id="page-tags" class="page-tags mb-5">
-      {% include "page_tags" with page %}
-    </div>
-    {% endif %}
-
-    <div class="mb-5">
-      <a
-        href="/forms/shares/new?page_id={{ page.id }}"
-        class="get btn btn-light btn-share d-inline-flex justify-content-center align-items-center"
-        role="button"
-      >
-        {% include "svg_icon" name: "share", class: "flex-shrink-0 mr-2",
-        size:16 %} Share
       </a>
-    </div>
+      <br />
+      <br />
+      <p>
+        Our affordability crisis makes it impossible for working people, artists
+        and families to make it in the city we call home and love. Let’s fill
+        empty homes by passing our vacancy tax in November.
+        <strong>Vote Yes on Prop M.</strong>
+      </p>
+      <p>
+        Sign up to be part of our movement so we can fill empty homes with
+        people and fight back against the endless real estate speculation that
+        is driving up the rent.
+      </p>
 
-    {% if page.show_stream? %} {% include "page_stream" %} {% endif %}
-  </div>
+      <div class="card card-lg mt-5">
+        <div class="card-body">
+          <div class="form">
+            {% form_for signup %} {% if request.sorta_logged_in? %}
+            <div class="mb-4">
+              <h3 class="mb-4 h4">{{ t_signup_will_you_join }}</h3>
+              {% if request.logged_in? == false %}
+              <p>{{ t_account_not_you_sign_out }}</p>
+              {% endif %}
+            </div>
+            {% endif %}
 
-  <div class="col-lg-5 offset-lg-1">
-    <div class="custom-form-position">
-      <div
-        class="form rapid-form mb-5 {% unless request.sorta_logged_in? %}d-lg-block"
-        style="display:none{% endunless %}"
-      >
-        {% form_for signup %} {% if request.sorta_logged_in? %}
-        <h2 class="h5 mb-3">
-          {% if request.current_signup.has_name? and
-          request.current_signup.first_name.size > 0 %}Hi {{
-          request.current_signup.first_name }}, t{% else %}T{% endif %}hanks for
-          joining!
-        </h2>
+            <div class="form-errors">{% error_messages_for signup %}</div>
 
-        {% include "shares_new", email_button: false, text: "Next, share this to
-        spread the word!" %} {% if request.logged_in? == false %}
-        <p>
-          If you're not {{ request.current_signup.name_or_email }},
-          <a href="{{ request.current_signup.logout_url }}"
-            >click here to signup</a
-          >.
-        </p>
-        {% endif %} {% else %}
-        <h2 class="h5 mb-3" id="rapid-modal-title">Join the campaign</h2>
+            {% if request.sorta_logged_in? == false or
+            request.current_signup.has_name? == false %}
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <div class="float-label">
+                  <label for="signup_first_name"
+                    >{{ t_forms_first_name }}</label
+                  >
+                  {% text_field "first_name", class:"form-control text" %}
+                </div>
+              </div>
 
-        <div class="form-errors" role="alert" aria-live="assertive">
-          {% error_messages_for signup %}
-        </div>
+              <div class="form-group col-md-6">
+                <div class="float-label">
+                  <label for="signup_last_name">{{ t_forms_last_name }}</label>
+                  {% text_field "last_name", class:"form-control text" %}
+                </div>
+              </div>
+            </div>
+            {% endif %} {% if request.sorta_logged_in? == false or
+            request.current_signup.has_mobile? == false %}
+            <div class="form-group">
+              <div class="float-label">
+                <label for="signup_email">{{ t_forms_email }}</label>
+                {% email_field "email", class:"form-control text" %}
+              </div>
+            </div>
 
-        <div class="form-row">
-          <div class="form-group col-sm">
-            <label for="signup_first_name">First name</label>
-            {% text_field "first_name", class:"form-control" %}
+            {% if page.signup.is_phone? or site.ask_for_mobiles? %}
+            <div class="form-row">
+              {% if page.signup.is_phone? %}
+              <div class="form-group col-12 col-md">
+                <div class="float-label">
+                  <label for="signup_phone_number">{{ t_forms_phone }}</label>
+                  {% phone_field "phone_number", class:"form-control text" %}
+                </div>
+              </div>
+              {% endif %} {% if site.ask_for_mobiles? %}
+              <div class="form-group col-12 col-md">
+                <div class="float-label">
+                  <label for="signup_mobile_number"
+                    >{{ t_forms_mobile_phone }}</label
+                  >
+                  {% phone_field "mobile_number", class:"form-control text" %}
+                </div>
+              </div>
+              {% endif %}
+            </div>
+            {% endif %} {% endif %} {% if page.signup.is_address? %} {% if
+            request.sorta_logged_in? == false or
+            request.current_signup.has_full_address? == false %} {% include
+            "page_address_inputs" wide: true %} {% endif %} {% endif %} {% if
+            page.signup.has_labeled_tags? %} {% include "labeled_tags" %} {%
+            endif %} {% if page.signup.is_volunteers? and
+            site.ask_for_volunteers? %} {% if request.sorta_logged_in? == false
+            or request.current_signup.is_volunteer == false %}
+            <div class="form-group custom-control custom-checkbox">
+              {% check_box "is_volunteer", class:"custom-control-input" %}
+              <label class="custom-control-label" for="signup_is_volunteer"
+                >{{ t_forms_want_to_volunteer }}</label
+              >
+            </div>
+            {% endif %} {% endif %}
+
+            <div class="form-group custom-control custom-checkbox">
+              {% check_box "activity_is_private", class:"custom-control-input"
+              %}
+              <label
+                for="signup_activity_is_private"
+                class="custom-control-label"
+                >{{ t_forms_dont_publish_this }}</label
+              >
+            </div>
+
+            {% if request.sorta_logged_in? == false or
+            request.current_signup.has_mobile? == false %} {% unless
+            page.show_consent_form? %}
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                {% check_box "email_opt_in", class:"custom-control-input" %}
+                <label class="custom-control-label" for="signup_email_opt_in"
+                  >{{ t_forms_send_email_updates }}</label
+                >
+              </div>
+            </div>
+
+            {% if site.ask_for_mobiles? %}
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                {% check_box "mobile_opt_in", class:"custom-control-input" %}
+                <label class="custom-control-label" for="signup_mobile_opt_in"
+                  >{{ t_forms_send_text_updates }}</label
+                >
+              </div>
+            </div>
+            {% endif %} {% endunless %} {% endif %} {% if
+            page.show_consent_form? %} {% include "consent_form" %} {% endif %}
+            {% if page.signup.is_all_info_collected? == false %} {% if
+            request.sorta_logged_in? %} {% include "form_submit_tag", label:
+            t_forms_update_info %} {% else %} {% include "form_submit_tag",
+            label: t_forms_sign_up %} {% endif %} {% endif %} {% endform_for %}
+            {% if page.text_keyword_instructions.size > 0 %}
+            <div class="form-group py-2">
+              {{ page.text_keyword_instructions }}
+            </div>
+            {% endif %}
           </div>
-          <div class="form-group col-sm">
-            <label for="signup_last_name">Last name</label>
-            {% text_field "last_name", class:"form-control" %}
-          </div>
         </div>
 
-        <div class="form-row">
-          <div class="form-group col-sm">
-            <label for="signup_email">Email</label>
-            {% email_field "email", class:"form-control" %}
-          </div>
-          {% if site.ask_for_mobiles? %}
-          <div class="form-group col-sm">
-            <label for="signup_mobile_number">Mobile phone</label>
-            {% phone_field "mobile_number", class:"form-control" %}
-          </div>
-          {% endif %}
-        </div>
-
-        {% if page.signup.is_phone? %}
-        <div class="form-group">
-          <label for="signup_phone_number">Phone</label>
-          {% phone_field "phone_number", class:"form-control" %}
-        </div>
-        {% endif %} {% if page.signup.is_address? %} {% if tags_list contains
-        "zip_only" %}
-        <div class="form-row">
-          <div class="form-group col-sm">
-            <label for="signup_home_address_zip">Zip code</label>
-            {% text_field "home_address.zip", class:"form-control" %}
-          </div>
-          <div class="form-group col-sm">
-            <label for="signup_country_code">Country</label>
-            {% capture country_select %}{% select_field "country_code",
-            page.signup.countries, "code", "name", class:"form-control
-            custom-select" %}{% endcapture %} {{ country_select | replace:
-            "signup_country_code", "signup_home_address_country_code" | replace:
-            "signup[country_code]",
-            "signup[home_address_attributes][country_code]" }}
-          </div>
-        </div>
-        {% else %}
-        <div class="form-group">
-          <label for="signup_submitted_address"
-            >Address <small>(Street, City, State, Postal code)</small></label
-          >
-          {% text_field "submitted_address", class:"form-control" %}
-        </div>
-        <div class="form-group">
-          <label for="signup_country_code">Country</label>
-          {% select_field "country_code", page.signup.countries, "code", "name",
-          class:"form-control custom-select" %}
-        </div>
-        {% endif %} {% endif %} {% if page.signup.has_labeled_tags? %}
-        <div class="my-3">
-          {% include "labeled_tags" %}
+        {% if page.show_social_slider? and page.public_activities_count > 0 %}
+        <div class="card-social-slider">
+          {% include "social_slider" %}
         </div>
         {% endif %}
-
-        <div class="my-3">
-          {% if page.show_consent_form? %} {% include "consent_form" %} {% else
-          %} {% if tags_list contains "consent_style_opt_in" %}
-          <fieldset class="form-group">
-            <legend>Would you like to receive email updates?</legend>
-            <div class="form-row">
-              <div class="col">
-                <div class="custom-control custom-radio">
-                  <input
-                    class="custom-control-input"
-                    type="radio"
-                    name="signup[email_opt_in]"
-                    id="signup_email_opt_in_1"
-                    value="1"
-                    required
-                  />
-                  <label
-                    class="custom-control-label radio d-flex align-items-center"
-                    for="signup_email_opt_in_1"
-                    >Yes
-                    <span class="badge badge-primary ml-2"
-                      ><span class="sr-only">(</span>Recommended<span
-                        class="sr-only"
-                        >)</span
-                      ></span
-                    ></label
-                  >
-                </div>
-              </div>
-              <div class="col">
-                <div class="custom-control custom-radio">
-                  <input
-                    class="custom-control-input"
-                    type="radio"
-                    name="signup[email_opt_in]"
-                    id="signup_email_opt_in_0"
-                    value="0"
-                    required
-                  />
-                  <label
-                    class="custom-control-label radio"
-                    for="signup_email_opt_in_0"
-                    >No</label
-                  >
-                </div>
-              </div>
-            </div>
-          </fieldset>
-          {% else %}
-          <div class="form-group custom-control custom-checkbox">
-            {% check_box "email_opt_in", class:"custom-control-input" %}
-            <label class="custom-control-label" for="signup_email_opt_in"
-              >Send me email updates</label
-            >
-          </div>
-          {% endif %} {% if site.ask_for_mobiles? %} {% if tags_list contains
-          "consent_style_opt_in" %}
-          <fieldset class="form-group">
-            <legend>Would you like to receive text messages?</legend>
-            <div class="form-row">
-              <div class="col">
-                <div class="custom-control custom-radio">
-                  <input
-                    class="custom-control-input"
-                    type="radio"
-                    name="signup[mobile_opt_in]"
-                    id="signup_mobile_opt_in_1"
-                    value="1"
-                    required
-                  />
-                  <label
-                    class="custom-control-label radio d-flex align-items-center"
-                    for="signup_mobile_opt_in_1"
-                    >Yes
-                    <span class="badge badge-primary ml-2"
-                      ><span class="sr-only">(</span>Recommended<span
-                        class="sr-only"
-                        >)</span
-                      ></span
-                    ></label
-                  >
-                </div>
-              </div>
-              <div class="col">
-                <div class="custom-control custom-radio">
-                  <input
-                    class="custom-control-input"
-                    type="radio"
-                    name="signup[mobile_opt_in]"
-                    id="signup_mobile_opt_in_0"
-                    value="0"
-                    required
-                  />
-                  <label
-                    class="custom-control-label radio"
-                    for="signup_mobile_opt_in_0"
-                    >No</label
-                  >
-                </div>
-              </div>
-            </div>
-          </fieldset>
-          {% else %}
-          <div class="form-group custom-control custom-checkbox">
-            {% check_box "mobile_opt_in", class:"custom-control-input" %}
-            <label class="custom-control-label" for="signup_mobile_opt_in"
-              >Send me text message updates</label
-            >
-          </div>
-          {% endif %} {% endif %} {% endif %} {% if page.signup.is_volunteers?
-          and site.ask_for_volunteers? %}
-          <div class="form-group custom-control custom-checkbox">
-            {% check_box "is_volunteer", class:"custom-control-input" %}
-            <label class="custom-control-label" for="signup_is_volunteer"
-              >I want to volunteer</label
-            >
-          </div>
-          {% endif %}
-        </div>
-
-        <button
-          class="submit-button btn btn-primary btn-block d-flex justify-content-center align-items-center"
-          type="submit"
-          name="commit"
-        >
-          {% include "svg_icon" name:"lock", class:"flex-shrink-0", size:"1rem",
-          style:"margin-right:.75rem" %} Sign up
-        </button>
-
-        <div class="form-submit" role="alert" aria-live="assertive"></div>
-
-        {% if site.ask_to_publish_to_stream? %}
-        <div class="form-group custom-control custom-checkbox mt-3">
-          {% check_box "activity_is_private", class:"custom-control-input" %}
-          <label class="custom-control-label" for="signup_activity_is_private"
-            >Don't display my name on the website</label
-          >
-        </div>
-        {% else %}
-        <input
-          id="signup_activity_is_private"
-          name="signup[activity_is_private]"
-          type="hidden"
-          value="1"
-        />
-        {% endif %} {% if page.text_keyword_instructions.size > 0 %}
-        <div class="form-group py-2">
-          {{ page.text_keyword_instructions }}
-        </div>
-        {% endif %} {% endif %} {% endform_for %} {% unless
-        request.sorta_logged_in? %}
-        <button
-          type="button"
-          class="close d-lg-none"
-          aria-label="Close"
-          data-dismiss="modal"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        {% endunless %}
       </div>
-      <!-- /.form -->
 
-      {% unless request.sorta_logged_in? %}
-      <div class="action-prompt show d-lg-none">
-        <button
-          type="button"
-          class="btn btn-primary btn-block btn-md"
-          data-target=".rapid-form"
-        >
-          Sign up
-        </button>
-      </div>
-      {% endunless %}
+      {% if page.tags_count > 0 %} {% include "page_tags" with page %} {% endif
+      %} {% if page.show_stream? %} {% include "page_stream" %} {% endif %}
     </div>
-    <a href="https://www.fillemptyhomes.com/donate">
-      <img
-        id="donate-image-empty-homes-tax"
-        src="https://dsasf-62612.web.app/empty-homes-tax/donate-button.png"
-        width="100%"
-        alt="Donate button"
-      />
-    </a>
-    <img
-      class="graphic-faq"
-      src="https://dsasf-62612.web.app/empty-homes-tax/one-oak-empty.png"
-      width="100%"
-      alt="Photo looking up at building where every unit looks the same, nothing is on any porch or in any window, the building is completely empty"
-    />
-    <p>
-      The Oak, a 109 unit building on Market St, is reported to be 100% vacant
-      over a year after completion
-    </p>
   </div>
 </div>
-{% endcapture %} {% include "content", sidebar: request.is_sidebar? %}
