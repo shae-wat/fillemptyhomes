@@ -1,0 +1,371 @@
+<style>
+  a {
+    color: #2B3990;
+  }
+  h3,
+  a:hover {
+    color: #9A8ABB !important;
+  }
+
+  button.btn-primary,
+  input.btn-primary,
+  a.btn-primary {
+    color: #000000;
+    background-color: #FFF200;
+    border-color: #FFF200;
+  }
+  button.btn-primary:hover,
+  input.btn-primary:hover,
+  a.btn-primary:hover {
+    color: #ffffff !important;
+    background-color: #3e98a1;
+    border-color: #3e98a1;
+  }
+
+  input.form-control:focus,
+  select:focus,
+  div.payment-input:focus {
+    border-color: #0086ff !important;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before,
+  .custom-control-input:focus {
+    color: #fff;
+    border-color: #0086ff;
+    background-color: #0086ff;
+  }
+
+  #logo-image-empty-homes-tax {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .graphic-faq {
+    margin: 1rem auto;
+  }
+
+  #graphic-faq-p {
+    margin-top: -48px;
+    margin-left: auto:
+    margin-right: auto;
+  }
+
+  #intro p {
+    font-size: 112%;
+    color: #666;
+  }
+
+  #logo-image-empty-homes-tax-donate {
+    margin-top: 64px;
+    margin-bottom: 48px;
+    margin-left: auto:
+    margin-right: auto;
+  }
+
+  .rapid-header::after {
+    background: none;
+  }
+
+  .my-5 {
+    margin-top: 0 !important;
+  }
+
+  nav.custom-header {
+    position: relative;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    min-width: 100%;
+    z-index: 9999999;
+  }
+
+  nav.custom-header a {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    word-spacing: -3px;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rapid-header {
+    min-height: 240px !important;
+  }
+
+  #intro {
+    margin: 0 64px 64px 0;
+  }
+
+  .secondary-content {
+    margin-top: 64px;
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    #logo-image-empty-homes-tax {
+      margin-top: -36px;
+      margin-bottom: 6px;
+      margin-right: auto;
+      margin-left: auto;
+      width: 70vw;
+    }
+
+    #intro {
+      margin: 0 0 64px 0;
+    }
+
+    .desktop-only {
+      display: none;
+    }
+
+    .rapid-header {
+      min-height: 140px !important;
+    }
+
+    nav.custom-header a {
+      font-size: 1rem;
+      font-weight: 800;
+    }
+  }
+
+  @media only screen and (min-width: 769px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+
+  div.question-list {
+    display: none;
+  }
+
+  footer.rapid-footer p:nth-child(2) {
+    margin-bottom: 0;
+  }
+
+  footer.rapid-footer p:first-of-type a:first-of-type {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  footer.rapid-footer p:nth-child(2) a:first-of-type {
+    font-size: 1rem;
+    color: #0067c2;
+    text-decoration: underline;
+  }
+
+  footer.rapid-footer nav {
+    max-width: 100%;
+  }
+
+  footer.rapid-footer nav a {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #2B3990;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+
+  footer.rapid-footer p {
+    font-size: 1rem;
+    color: #000000;
+  }
+</style>
+
+{% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
+page_content %}
+
+<div class="header-img-wrap pb-4 pt-lg-4">
+  <header id="header" class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/">
+      <img
+        src="https://dsasf-62612.web.app/empty-homes-tax/logo-fill-empty-homes.png"
+        class="navbar-brand-img mw-100"
+        alt="Fill Empty Homes Yes! on Prop M"
+      />
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#mobileNav"
+      aria-controls="mobileNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      Menu
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mobileNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="/" class="nav-link">Join</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="/endorsements" class="nav-link">Endorsements</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="/faq" class="nav-link">FAQ</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="/vacias" class="nav-link">¡SÍ a la M!</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="/works" class="nav-link">How It Works</a>
+        </li>
+
+        <li class="nav-item nav-item-bordered nav-item-padded">
+          <a href="/donate" class="btn btn-primary btn-block">Donate</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="collapse navbar-collapse" id="primaryNav">
+      <ul class="navbar-nav navbar-nav-primary">
+        <li class="nav-item d-none">
+          <a href="/" class="nav-link">Join</a>
+        </li>
+
+        <li class="nav-item d-none">
+          <a href="/endorsements" class="nav-link">Endorsements</a>
+        </li>
+
+        <li class="nav-item d-none">
+          <a href="/faq" class="nav-link">FAQ</a>
+        </li>
+
+        <li class="nav-item d-none">
+          <a href="/vacias" class="nav-link">¡SÍ a la M!</a>
+        </li>
+
+        <li class="nav-item d-none">
+          <a href="/works" class="nav-link">How It Works</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item navbar-more">
+          <a
+            href="javascript:void(0);"
+            class="nav-link navbar-more-toggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            More
+          </a>
+          <div class="navbar-more-container" aria-hidden="true" inert="">
+            <div class="navbar-more-inner">
+              <div class="navbar-more-roots" style="">
+                <a class="navbar-more-item" href="/" tabindex="-1">Join</a>
+
+                <a class="navbar-more-item" href="/endorsements" tabindex="-1"
+                  >Endorsements</a
+                >
+
+                <a class="navbar-more-item" href="/faq" tabindex="-1">FAQ</a>
+
+                <a class="navbar-more-item" href="/vacias" tabindex="-1"
+                  >¡SÍ a la M!</a
+                >
+
+                <a class="navbar-more-item" href="/works" tabindex="-1"
+                  >How It Works</a
+                >
+              </div>
+              <div class="navbar-more-leafs"></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <a href="/donate" class="btn btn-primary navbar-btn text-nowrap"
+        >Donate</a
+      >
+    </div>
+  </header>
+</div>
+
+<div class="row">
+  <div class="col-md-7 pt-4 pt-md-0">
+    <img
+      id="logo-image-empty-homes-tax"
+      src="https://dsasf-62612.web.app/empty-homes-tax/banner-title.png"
+      width="100%"
+      alt="Fill Empty Homes. YES! on the Vacant Homes Tax"
+    />
+    <ul class="list-unstyled mb-4 faq faq-{{ page.id }}">
+      {% for child in page.children %}
+      <li
+        class="{% unless forloop.last == true %}mb-4{% endunless %} page-excerpt question-page-{{ child.id }}"
+      >
+        {% if child.type_name == 'Question' %}
+        <h3>{{ child.headline }}</h3>
+
+        <div class="excerpt">
+          {% if child.question.content.size > 0 %} {{ child.question.content }}
+          {% endif %} {% if child.question.answer.size > 0 %}
+          <div class="card">
+            <div class="card-body">
+              {{ child.question.answer }}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <a href="https://www.fillemptyhomes.com/donate">
+      <img
+        id="logo-image-empty-homes-tax-donate"
+        src="https://dsasf-62612.web.app/empty-homes-tax/banner-donate.png"
+        width="100%"
+      />
+    </a>
+  </div>
+
+  <div class="col-lg-4 offset-lg-1">
+    <img
+      class="graphic-faq"
+      src="https://dsasf-62612.web.app/empty-homes-tax/empty-sf-building.jpeg"
+      width="100%"
+    />
+    <p>
+      A Mission Bay apartment building sits with starkly visible vacancies
+    </p>
+
+    <img
+      class="graphic-faq"
+      src="https://dsasf-62612.web.app/empty-homes-tax/one-oak-empty.png"
+      width="100%"
+      style="margin-top: 48px;"
+      alt="Photo looking up at building where every unit looks the same, nothing is on any porch or in any window, the building is completely empty"
+    />
+    <p>
+      The Oak, a 109 unit building on Market St, is reported to be 100% vacant
+      over a year after completion
+    </p>
+  </div>
+
+  {% if page.tags_count > 0 %}
+  <div class="mt-4">
+    {% include "page_tags" with page %}
+  </div>
+  {% endif %} {% if page.show_stream? %}
+  <div class="mt-4">
+    {% include "page_stream" %}
+  </div>
+  {% endif %}
+</div>
+
+{% endcapture %} {% include "content", sidebar: request.is_sidebar? %}
