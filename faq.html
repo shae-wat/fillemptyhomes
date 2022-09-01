@@ -13,13 +13,24 @@
   h5,
   h6,
   .form-errors .errorExplanation h2,
+  .page-headline,
   .h1,
   .h2,
   .h3,
   .h4,
   .h5,
   .h6 {
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+  }
+
+  h4 {
+    color: #2b3990;
+  }
+
+  .card {
+    padding: 24px;
+    margin: 24px 0 64px 0;
   }
 
   button.btn-primary,
@@ -35,6 +46,21 @@
     color: #ffffff !important;
     background-color: #9a8abb;
     border-color: #9a8abb;
+  }
+
+  .page-content {
+    padding: 48px 24px;
+  }
+
+  .title-text {
+    font-weight: 900;
+    margin-bottom: 6px;
+  }
+
+  .image-subtext {
+    font-size: 14px;
+    margin-top: 12px;
+    color: #666;
   }
 
   .header-image {
@@ -61,18 +87,6 @@
   .graphic-content {
     margin-top: 24px;
     margin-bottom: 24px;
-  }
-
-  .card {
-    padding: 24px;
-    margin-bottom: 48px;
-  }
-
-  .card-row {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
   }
 
   #custom-checkbox {
@@ -121,8 +135,8 @@
       margin-top: -8px;
       line-height: 1;
     }
-    .card-row {
-      flex-direction: column;
+    .page-content {
+      padding: 48px 0;
     }
   }
   @media only screen and (min-width: 769px) {
@@ -136,7 +150,7 @@
   {% include "breadcrumbs" %}
   <div class="row justify-content-center">
     <div class="col-lg-10">
-      <div style="margin: auto; margin-bottom: 48px;">
+      <div style="margin: auto; margin-bottom: 36px;">
         <img
           id="logo-image-empty-homes-tax"
           src="https://dsasf-62612.web.app/empty-homes-tax/banner-title.png"
@@ -144,94 +158,113 @@
           alt="Fill Empty Homes. YES! on the Vacant Homes Tax"
         />
       </div>
+      <h1 style="margin-bottom: 48px;">Frequently Asked Questions</h1>
     </div>
     <div class="col-lg-9">
-      {% if page.headline.size > 0 %}
-      <h2 class="page-headline">{{ page.headline }}</h2>
-      {% endif %} {% if page.faq.content.size > 0 %}
-      <div class="page-content mt-3">
-        {{ page.faq.content }}
-      </div>
-      {% endif %}
-
-      <div class="accordion mt-5" id="accordion-{{ page.slug }}">
-        {% for child in page.children %} {% if child.type_name == 'Question' %}
-        <div class="card">
-          <div class="card-header" id="heading-{{ child.slug }}">
-            <div>
-              <h2 class="accordion-headline">
-                <a href="{{ child.url }}">{{ child.headline }}</a>
-              </h2>
-              {% if child.question.content.size > 0 %}
-              <div class="accordion-details">
-                {{ child.question.content }}
-              </div>
-              {% endif %}
-            </div>
-            {% if child.question.answer.size > 0 %}
-            <button
-              class="btn accordion-toggle"
-              type="button"
-              data-toggle="collapse"
-              data-target="#collapse-{{ child.slug }}"
-              aria-expanded="{% if forloop.first == true %}true{% else %}false{% endif %}"
-              aria-controls="collapse-{{ child.slug }}"
-            >
-              <span class="sr-only">{{ t_toggle }}</span>
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 8.25V15.75"
-                  stroke="black"
-                  stroke-opacity="0.5"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
-                  stroke="black"
-                  stroke-opacity="0.5"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M8.25 12H15.75"
-                  stroke="black"
-                  stroke-opacity="0.5"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            {% endif %}
-          </div>
-          {% if child.question.answer.size > 0 %}
-          <div
-            id="collapse-{{ child.slug }}"
-            class="collapse{% if forloop.first == true %} show{% endif %}"
-            aria-labelledby="heading-{{ child.slug }}"
-            data-parent="#accordion-{{ page.slug }}"
-          >
-            <div class="card-body">
-              {{ child.question.answer }}
-            </div>
-          </div>
-          {% endif %}
-        </div>
-        {% endif %} {% endfor %}
+      <h4>
+        <strong>Why an Empty Homes Tax?</strong>
+      </h4>
+      <div class="card">
+        <p>
+          More than 40,000 homes — nearly 1 in 10 residential units — are vacant
+          in San Francisco, a city with a long-standing housing affordability
+          crisis, where 10,000 people are living on the streets. Since 2015, the
+          rate of vacant residential housing has increased by 20%, according to
+          a January 2022 BLA report.
+        </p>
+        <p>
+          The fastest growing category of vacant units is units purchased but
+          never occupied, including investor-owned properties.
+        </p>
+        <p>
+          The Empty Homes Tax will tax owners of buildings of three units or
+          more, where a residential unit has been vacant for more than six
+          months in a given year. The tax rate is higher for larger units, and
+          it increases the longer a home is kept vacant.
+        </p>
+        <p>
+          The Empty Homes Tax is modeled after a residential vacancy tax passed
+          in Vancouver in 2016, which is credited with bringing more than 18,000
+          units online since it went into effect. If San Francisco were to adopt
+          a tax based on the Vancouver model, the city is estimated to see an
+          activation of around 4,500 units within two years. In addition, the
+          tax is projected to raise $38 million annually.
+        </p>
       </div>
 
-      {% if page.tags_count > 0 %} {% include "page_tags" with page %} {% endif
-      %} {% if page.show_stream? %} {% include "page_stream" %} {% endif %}
+      <h4>
+        <strong>Where will the funds from the tax go?</strong>
+      </h4>
+      <div class="card">
+        <p>
+          Revenue from the measure is dedicated to homelessness prevention and
+          the acquisition of vacant units.
+        </p>
+        <p>
+          Half of the funds will be allocated to rental subsidies for seniors
+          and low-income families, a key strategy in preventing homelessness.
+        </p>
+        <p>
+          The other half will be dedicated to a new program for the city to
+          acquire and rehabilitate vacant buildings, and convert them into
+          permanently affordable housing.
+        </p>
+      </div>
+
+      <h4>
+        <strong
+          >Why does the proposed measure carve out single family homes and
+          duplexes?</strong
+        >
+      </h4>
+      <div class="card">
+        <p>
+          The primary purpose of the Empty Homes Tax is to address the practice
+          of speculators and institutional investors using housing in San
+          Francisco as mere vehicles for maximizing profits, rather than places
+          where people can live. They do this by buying properties, holding them
+          vacant, and eventually re-selling.
+        </p>
+        <p>
+          In many cities in California, we have seen institutional investors
+          target and buy up large numbers of single family homes — but that
+          really hasn’t been the case here.
+        </p>
+        <p>
+          In San Francisco, the phenomenon of investors/speculators buying and
+          holding units off the market has almost exclusively occurred in
+          larger, multi-unit properties.
+        </p>
+        <p>
+          This measure seeks to incentivize those investors to get their units
+          online, or pay their fair share, and not to create an overly-broad
+          measure — hence the limit that the tax only applies to buildings of
+          three-units or more.
+        </p>
+      </div>
+
+      <h4>
+        <strong>How will the measure be enforced?</strong>
+      </h4>
+      <div class="card">
+        <p>
+          Under the proposal, owners of property in San Francisco would be
+          required to file annually regarding residential vacancies, and declare
+          that their units were either occupied for more than six months in a
+          given year, or that they qualify for one of the exemptions.
+        </p>
+        <p>
+          The Treasurer and Tax Collector will be in charge of auditing and
+          enforcing the measure, and ensuring that bad actors are held to
+          account.
+        </p>
+        <p>
+          The Rental Registry, which is being phased in over the next two years,
+          will assist the city in tracking vacant rental units.
+        </p>
+      </div>
+
+      {% include "page_tags" with page %}
     </div>
   </div>
 </div>
