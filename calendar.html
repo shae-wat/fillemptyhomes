@@ -1,345 +1,280 @@
 <style>
   a {
-    color: #2B3990;
+    color: #2b3990;
   }
-  h3,
+
   a:hover {
-    color: #9A8ABB !important;
+    color: #9a8abb !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .form-errors .errorExplanation h2,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   }
 
   button.btn-primary,
   input.btn-primary,
   a.btn-primary {
     color: #000000;
-    background-color: #FFF200;
-    border-color: #FFF200;
+    background-color: #2b3990;
+    border-color: #2b3990;
   }
   button.btn-primary:hover,
   input.btn-primary:hover,
   a.btn-primary:hover {
     color: #ffffff !important;
-    background-color: #3e98a1;
-    border-color: #3e98a1;
+    background-color: #9a8abb;
+    border-color: #9a8abb;
   }
 
-  input.form-control:focus,
-  select:focus,
-  div.payment-input:focus {
-    border-color: #0086ff !important;
-  }
-
-  .custom-control-input:checked ~ .custom-control-label::before,
-  .custom-control-input:focus {
-    color: #fff;
-    border-color: #0086ff;
-    background-color: #0086ff;
-  }
-
-  #logo-image-empty-homes-tax {
-    margin-top: 24px;
+  .header-image {
+    margin-top: 0;
     margin-bottom: 24px;
-    width: 100%;
   }
 
-  .graphic-faq {
-    margin: 1rem auto;
+  .nav-item-login {
+    display: none;
   }
 
-  #graphic-faq-p {
-    margin-top: -48px;
-    margin-left: auto:
-    margin-right: auto;
+  .navbar-nav-primary {
+    margin-right: 12px;
   }
 
-  #intro p {
-    font-size: 112%;
-    color: #666;
-  }
-
-  #logo-image-empty-homes-tax-donate {
-    margin-top: 64px;
-    margin-bottom: 48px;
-    margin-left: auto:
-    margin-right: auto;
-  }
-
-  .rapid-header::after {
-    background: none;
-  }
-
-
-  nav.custom-header {
-    position: relative;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 100%;
-    z-index: 9999999;
-  }
-
-  nav.custom-header a {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    word-spacing: -3px;
-    text-decoration: none;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .rapid-header {
-    min-height: 240px !important;
-  }
-
-  #intro {
-    margin: 0 64px 64px 0;
+  .nav-link {
+    margin-right: 36px;
   }
 
   .secondary-content {
     margin-top: 64px;
   }
 
-  .page-link {
-    color: #2B3990;
+  .graphic-content {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 
-  .page-item.active .page-link {
-    background-color: #2B3990;
-    border-color: #2B3990;
-    color: #FFF;
+  .card {
+    padding: 24px;
+    margin-bottom: 48px;
+  }
+
+  .card-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #custom-checkbox {
+    display: none;
+  }
+
+  .title-block {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .title-yes {
+    font-weight: 900;
+  }
+
+  .title-for {
+    margin-top: -16px;
+    font-weight: 900;
+  }
+
+  .title-nov {
+    margin-top: 12px;
+    color: #666;
+  }
+
+  .title-cons {
+    margin-top: 6px;
+    color: #666;
+  }
+
+  .custom-control {
+    display: none;
   }
 
   @media only screen and (max-width: 768px) {
-
-    #logo-image-empty-homes-tax {
-      margin-top: 0;
-      margin-bottom: 24px;
-      padding-right: 0;
-    }
-
-    #intro {
-      margin: 0 0 64px 0;
-    }
-
     .desktop-only {
       display: none;
     }
-
-    .rapid-header {
-      min-height: 140px !important;
+    .header-image {
+      margin-top: 0;
+      margin-bottom: 6px;
+      margin-right: auto;
+      margin-left: auto;
     }
-
-    nav.custom-header a {
-      font-size: 1rem;
-      font-weight: 800;
+    .title-for {
+      margin-top: -8px;
+      line-height: 1;
+    }
+    .card-row {
+      flex-direction: column;
     }
   }
-
   @media only screen and (min-width: 769px) {
     .mobile-only {
       display: none;
     }
   }
-
-  div.question-list {
-    display: none;
-  }
-
-  footer.rapid-footer p:nth-child(2) {
-    margin-bottom: 0;
-  }
-
-  footer.rapid-footer p:first-of-type a:first-of-type {
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-decoration: none;
-  }
-
-  footer.rapid-footer p:nth-child(2) a:first-of-type {
-    font-size: 1rem;
-    color: #0067c2;
-    text-decoration: underline;
-  }
-
-  footer.rapid-footer nav {
-    max-width: 100%;
-  }
-
-  footer.rapid-footer nav a {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #2B3990;
-    letter-spacing: 1px;
-    text-decoration: none;
-  }
-
-  footer.rapid-footer p {
-    font-size: 1rem;
-    color: #000000;
-  }
 </style>
+<div class="page">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div style="margin: auto; margin-bottom: 48px;">
+        <img
+          id="logo-image-empty-homes-tax"
+          src="https://dsasf-62612.web.app/empty-homes-tax/banner-title.png"
+          width="100%"
+          alt="Fill Empty Homes. YES! on the Vacant Homes Tax"
+        />
+      </div>
+    </div>
+    {% include "breadcrumbs" %}
+    <div class="row mb-4">
+      <div class="col">
+        {% if page.headline.size > 0 %}
+        <h2 class="mb-3">{{ page.headline }}</h2>
+        {% endif %}
+      </div>
+      <div class="col-auto">
+        {% if page.calendar.allow_user_submitted? %}
+        <a href="{{ page.calendar.new_event_url }}" class="btn btn-primary">
+          {% if page.calendar.event_name == "" %} {{ t_events_user_events_cta }}
+          {% else %} {% capture custom_event_name %}{{ page.calendar.event_name
+          | downcase }}{% endcapture %} {{ t_events_user_events_cta_custom |
+          replace: '$event', custom_event_name }} {% endif %}
+        </a>
+        {% endif %}
+      </div>
+    </div>
 
-{% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
-page_content %}
-
-<div class="desktop-only">
-  <nav class="row custom-header">
-    <a href="/faq">FAQ</a>
-    <a href="/endorsements">Endorsers</a>
-    <a href="/works">How It Works</a>
-    <a href="/donate">Donate</a>
-    <a href="/vacias">Traducción</a>
-  </nav>
-</div>
-<div class="mobile-only">
-  <nav class="row custom-header">
-    <a href="/faq">FAQ</a>
-    <a href="/endorsements">Endorsers</a>
-    <a href="/donate">Donate</a>
-    <a href="/vacias">Traducción</a>
-  </nav>
-</div
-<div id="intro" class="intro">
-  <img
-    id="logo-image-empty-homes-tax"
-    src="https://dsasf-62612.web.app/empty-homes-tax/banner-title.png"
-    width="100%"
-    alt="Fill Empty Homes. YES! on the Vacant Homes Tax"
-  />
-  {{ page.calendar.content }}
-</div> {% if page.calendar.is_proximity? %}
-<div class="mb-4">
-  <div class="card">
-    <h4 class="card-header">
-      Find {{ page.calendar.event_name | pluralize | downcase }} near you
-    </h4>
-    <div class="card-body">
-      {% form_for address_change %}
-      <div class="form-wrap">
-        <div class="form">
-          <div class="form-group">
-            {% text_field "submitted_address", class:"form-control text",
-            placeholder:"Address or postal code" %}
-          </div>
-
-          <div class="form-group distance">
-            <span class="mr-2 within">within</span>
-            <span class="radio-inline"
-              >{{ page.calendar.distance_radio_buttons }}</span
-            >
-          </div>
-
-          <div>
-            {% submit_tag "Search", class:"btn btn-primary submit-button" %} {%
-            if page.calendar.allow_user_submitted? %} or
-            <a href="{{ page.calendar.new_event_url }}">Host your own</a>
-            {% endif %}
-            <div class="form-submit" role="alert" aria-live="assertive"></div>
-          </div>
-
-          {% if page.calendar.events_upcoming_nearby_count > 0 %} {% if
-          page.calendar.events_upcoming_nearby_count > 1 %}
-          <div class="my-2">
-            <strong
-              >Found {{ page.calendar.events_upcoming_nearby_count }} {{
-              page.calendar.event_name | pluralize | downcase }}.</strong
-            >
+    {% if page.calendar.content.size > 0 %}
+    <div id="intro" class="intro">
+      {{ page.calendar.content }}
+    </div>
+    {% endif %} {% if page.calendar.is_proximity? %}
+    <div class="mb-4">
+      <div class="card">
+        <div class="row no-gutters align-items-center proximity-filter">
+          {% if page.calendar.show_map? %}
+          <div class="col-lg-6 map-wrap align-self-stretch order-1 order-lg-0">
+            {% if page.calendar.events_upcoming_nearby_count > 0 %} {% include
+            "map" markers:page.calendar.events_upcoming_nearby_map_json %} {%
+            else %} {% include "map"
+            markers:page.calendar.events_upcoming_map_json %} {% endif %}
           </div>
           {% endif %}
-          <div class="my-2 map-wrap">
-            <div class="map">
-              {{ page.calendar.events_upcoming_nearby_map }}
+          <div
+            class="{% if page.calendar.show_map? %}col-lg-6{% else %}col-12{% endif %} order-0 order-lg-1"
+          >
+            {% form_for address_change %}
+            <div class="form">
+              <div class="card-body py-lg-5">
+                <h3 class="h5 mb-4 text-sans-serif font-weight-semi-bold">
+                  {{ t_events_find_events_nearby }}
+                </h3>
+
+                <div class="form-group distance">
+                  <span class="radio-inline form-amount-options size-all">
+                    {{ page.calendar.distance_radio_buttons | replace: 'mile',
+                    t_event_distance_singlular | replace: 'miles',
+                    t_event_distance_plural }}
+                  </span>
+                </div>
+
+                <div class="form-group">
+                  <div class="float-label">
+                    <label for="address_change_submitted_address"
+                      >{{ t_events_address_or_postal_code}}</label
+                    >
+                    {% text_field "submitted_address", class:"form-control
+                    form-control-sm text",
+                    placeholder:t_events_address_or_postal_code %}
+                  </div>
+                </div>
+
+                <div class="form-group mb-0">
+                  {% include "form_submit_tag" label: t_events_search %}{% if
+                  page.calendar.events_upcoming_nearby_count > 0 %} {%
+                  submit_tag t_forms_clear_search, class:"btn btn-secondary
+                  submit-button ml-2" %}{% endif %}
+                </div>
+              </div>
+
+              <div class="card-footer">
+                <small>
+                  {% if page.calendar.events_upcoming_nearby_count > 0 %}
+                  <strong>{{ t_events_showing_count_nearby }}</strong>
+                  {% else %} {{ t_events_no_events_nearby }} {% endif %}
+                </small>
+              </div>
             </div>
+            {% endform_for %}
           </div>
-          {% else %}
-          <div class="my-2">
-            <strong
-              >No {{ page.calendar.event_name | pluralize | downcase }} found
-              nearby,</strong
-            >
-            try widening your search {% if page.calendar.allow_user_submitted?
-            %} or maybe
-            <a href="{{ page.calendar.new_event_url }}">host your own</a>? {%
-            endif %}
-          </div>
-          {% if page.calendar.events_upcoming.size > 0 %}
-          <div class="my-2 map-wrap">
-            <div class="mb-2 showing-all">
-              Showing all {{ page.calendar.events_upcoming_count }} {{
-              page.calendar.event_name | pluralize | downcase }} instead.
-            </div>
-            {{ page.calendar.events_upcoming_map }}
-          </div>
-          {% endif %} {% endif %}
         </div>
       </div>
-      {% endform_for %}
     </div>
-  </div>
-</div>
 
-{% if page.calendar.events_upcoming_nearby.size > 0 %}
-<ul class="list-unstyled mb-4">
-  {% for event in page.calendar.events_upcoming_nearby %}
-  <li
-    class="{% unless forloop.last == true %}mb-4 pb-4 border-bottom{% endunless %}"
-  >
-    {% include "event" %}
-  </li>
-  {% endfor %}
-</ul>
+    {% if page.calendar.events_upcoming_nearby.size > 0 %}
+    <ul class="list-unstyled mb-4">
+      {% for event in page.calendar.events_upcoming_nearby %}
+      <li class="{% unless forloop.last == true %}mb-4{% endunless %}">
+        {% include "event" %}
+      </li>
+      {% endfor %}
+    </ul>
 
-{{ page.calendar.events_upcoming_nearby | paginate prev_label: "Previous"
-next_label: "Next" }} {% else %}
+    {{ page.calendar.events_upcoming_nearby | paginate prev_label: t_prev
+    next_label: t_next }} {% else %}
 
-<ul class="list-unstyled mb-4">
-  {% for event in page.calendar.events_upcoming %}
-  <li
-    class="{% unless forloop.last == true %}mb-4 pb-4 border-bottom{% endunless %}"
-  >
-    {% include "event" %}
-  </li>
-  {% endfor %}
-</ul>
+    <ul class="list-unstyled mb-4">
+      {% for event in page.calendar.events_upcoming %}
+      <li class="{% unless forloop.last == true %}mb-4{% endunless %}">
+        {% include "event" %}
+      </li>
+      {% endfor %}
+    </ul>
 
-{{ page.calendar.events_upcoming | paginate prev_label: "Previous" next_label:
-"Next" }} {% endif %} {% else %} {% if page.calendar.show_map? %} {% if
-page.calendar.events_upcoming_count > 0 %}
+    {{ page.calendar.events_upcoming | paginate prev_label: t_prev next_label:
+    t_next }} {% endif %} {% else %} {% if page.calendar.show_map? %} {% if
+    page.calendar.events_upcoming_count > 0 %}
 
-<div class="mb-4">
-  <div class="form-wrap">
-    <div class="form">
-      <div class="map-wrap">
-        {{ page.calendar.events_upcoming_map }}
+    <div class="mb-4">
+      <div class="form-wrap">
+        <div class="form">
+          <div class="map-wrap rounded" style="height: 340px;">
+            {% include "map" markers:page.calendar.events_upcoming_map_json %}
+          </div>
+        </div>
       </div>
     </div>
+
+    {% endif %} {% endif %} {% if page.calendar.events_upcoming_count == 0 %} {{
+    t_events_no_events_found }} {% else %}
+
+    <ul class="list-unstyled mb-0 space-y-4">
+      {% for event in page.calendar.events_upcoming %}
+      <li>
+        {% include "event" %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    {{ page.calendar.events_upcoming | paginate prev_label: t_prev next_label:
+    t_next }} {% endif %} {% endif %}
   </div>
 </div>
-
-{% endif %} {% endif %} {% if page.calendar.events_upcoming_count == 0 %} No {{
-page.calendar.event_name | pluralize | downcase }} yet. {% if
-page.calendar.allow_user_submitted? %} You should
-<a href="{{ page.calendar.new_event_url }}">host your own</a>! {% endif %} {%
-else %}
-
-<ul class="list-unstyled mb-4">
-  {% for event in page.calendar.events_upcoming %}
-  <li
-    class="{% unless forloop.last == true %}mb-4 pb-4 border-bottom{% endunless %}"
-  >
-    {% include "event" %}
-  </li>
-  {% endfor %}
-</ul>
-
-{% if page.calendar.allow_user_submitted? %}
-<div class="mt-4 pt-4 border-top">
-  <a class="btn btn-secondary" href="{{ page.calendar.new_event_url }}"
-    >Host your own {{ page.calendar.event_name | downcase }}</a
-  >
-</div>
-{% endif %} {{ page.calendar.events_upcoming | paginate prev_label: "&laquo;"
-next_label: "&raquo;" }} {% endif %} {% endif %} {% endcapture %} {% include
-"content", sidebar: request.is_sidebar? %}
