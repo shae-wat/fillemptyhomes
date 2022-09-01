@@ -1,274 +1,231 @@
 <style>
   a {
-    color: #2B3990;
+    color: #2b3990;
   }
-  h3,
+
   a:hover {
-    color: #9A8ABB !important;
+    color: #9a8abb !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .form-errors .errorExplanation h2,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   }
 
   button.btn-primary,
   input.btn-primary,
   a.btn-primary {
     color: #000000;
-    background-color: #FFF200;
-    border-color: #FFF200;
+    background-color: #2b3990;
+    border-color: #2b3990;
   }
   button.btn-primary:hover,
   input.btn-primary:hover,
   a.btn-primary:hover {
     color: #ffffff !important;
-    background-color: #3e98a1;
-    border-color: #3e98a1;
+    background-color: #9a8abb;
+    border-color: #9a8abb;
   }
 
-  input.form-control:focus,
-  select:focus,
-  div.payment-input:focus {
-    border-color: #0086ff !important;
-  }
-
-  .custom-control-input:checked ~ .custom-control-label::before,
-  .custom-control-input:focus {
-    color: #fff;
-    border-color: #0086ff;
-    background-color: #0086ff;
-  }
-
-  #logo-image-empty-homes-tax {
-    margin-top: 24px;
+  .header-image {
+    margin-top: 0;
     margin-bottom: 24px;
   }
 
-  .graphic-faq {
-    margin: 1rem auto;
+  .nav-item-login {
+    display: none;
   }
 
-  #graphic-faq-p {
-    margin-top: -48px;
-    margin-left: auto:
-    margin-right: auto;
+  .navbar-nav-primary {
+    margin-right: 12px;
   }
 
-  #intro p {
-    font-size: 112%;
-    color: #666;
-  }
-
-  #logo-image-empty-homes-tax-donate {
-    margin-top: 64px;
-    margin-bottom: 48px;
-    margin-left: auto:
-    margin-right: auto;
-  }
-
-  .rapid-header::after {
-    background: none;
-  }
-
-  .my-5 {
-    margin-top: 0 !important;
-  }
-
-  nav.custom-header {
-    position: relative;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 12px;
-    min-width: 100%;
-    z-index: 9999999;
-  }
-
-  nav.custom-header a {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    word-spacing: -3px;
-    text-decoration: none;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .rapid-header {
-    min-height: 240px !important;
-  }
-
-  #intro {
-    margin: 0 64px 64px 0;
+  .nav-link {
+    margin-right: 36px;
   }
 
   .secondary-content {
     margin-top: 64px;
   }
 
+  .graphic-content {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .card {
+    padding: 24px;
+    margin-bottom: 48px;
+  }
+
+  .card-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #custom-checkbox {
+    display: none;
+  }
+
+  .title-block {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .title-yes {
+    font-weight: 900;
+  }
+
+  .title-for {
+    margin-top: -16px;
+    font-weight: 900;
+  }
+
+  .title-nov {
+    margin-top: 12px;
+    color: #666;
+  }
+
+  .title-cons {
+    margin-top: 6px;
+    color: #666;
+  }
+
+  .custom-control {
+    display: none;
+  }
+
   @media only screen and (max-width: 768px) {
-
-    #logo-image-empty-homes-tax {
-      margin-top: -36px;
-      margin-bottom: 6px;
-      margin-right: auto;
-      margin-left: auto;
-      width: 70vw;
-    }
-
-    #intro {
-      margin: 0 0 64px 0;
-    }
-
     .desktop-only {
       display: none;
     }
-
-    .rapid-header {
-      min-height: 140px !important;
+    .header-image {
+      margin-top: 0;
+      margin-bottom: 6px;
+      margin-right: auto;
+      margin-left: auto;
     }
-
-    nav.custom-header a {
-      font-size: 1rem;
-      font-weight: 800;
+    .title-for {
+      margin-top: -8px;
+      line-height: 1;
+    }
+    .card-row {
+      flex-direction: column;
     }
   }
-
   @media only screen and (min-width: 769px) {
     .mobile-only {
       display: none;
     }
   }
-
-  div.question-list {
-    display: none;
-  }
-
-  footer.rapid-footer p:nth-child(2) {
-    margin-bottom: 0;
-  }
-
-  footer.rapid-footer p:first-of-type a:first-of-type {
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-decoration: none;
-  }
-
-  footer.rapid-footer p:nth-child(2) a:first-of-type {
-    font-size: 1rem;
-    color: #0067c2;
-    text-decoration: underline;
-  }
-
-  footer.rapid-footer nav {
-    max-width: 100%;
-  }
-
-  footer.rapid-footer nav a {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #2B3990;
-    letter-spacing: 1px;
-    text-decoration: none;
-  }
-
-  footer.rapid-footer p {
-    font-size: 1rem;
-    color: #000000;
-  }
 </style>
 
-{% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
-page_content %}
-
-<div class="desktop-only">
-  <nav class="row custom-header">
-    <a href="/join">Join</a>
-    <a href="/works">How It Works</a>
-    <a href="/endorsements">Endorsers</a>
-    <a href="/donate">Donate</a>
-    <a href="/vacias">Traducción</a>
-  </nav>
-</div>
-<div class="mobile-only">
-  <nav class="row custom-header">
-    <a href="/join">Join</a>
-    <a href="/endorsements">Endorsers</a>
-    <a href="/donate">Donate</a>
-    <a href="/vacias">Traducción</a>
-  </nav>
-</div>
-
-<div class="row">
-  <div class="col-md-7 pt-4 pt-md-0">
-    <img
-      id="logo-image-empty-homes-tax"
-      src="https://dsasf-62612.web.app/empty-homes-tax/banner-title.png"
-      width="100%"
-      alt="Fill Empty Homes. YES! on the Vacant Homes Tax"
-    />
-    <ul class="list-unstyled mb-4 faq faq-{{ page.id }}">
-      {% for child in page.children %}
-      <li
-        class="{% unless forloop.last == true %}mb-4{% endunless %} page-excerpt question-page-{{ child.id }}"
-      >
-        {% if child.type_name == 'Question' %}
-        <h3>{{ child.headline }}</h3>
-
-        <div class="excerpt">
-          {% if child.question.content.size > 0 %} {{ child.question.content }}
-          {% endif %} {% if child.question.answer.size > 0 %}
-          <div class="card">
-            <div class="card-body">
-              {{ child.question.answer }}
-            </div>
-          </div>
-          {% endif %}
+<div class="page">
+  <div class="page-inner">
+    {% include "breadcrumbs" %}
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        {% if page.headline.size > 0 %}
+        <h2 class="page-headline">{{ page.headline }}</h2>
+        {% endif %} {% if page.faq.content.size > 0 %}
+        <div class="page-content mt-3">
+          {{ page.faq.content }}
         </div>
         {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
 
-    <a href="https://www.fillemptyhomes.com/donate">
-      <img
-        id="logo-image-empty-homes-tax-donate"
-        src="https://dsasf-62612.web.app/empty-homes-tax/banner-donate.png"
-        width="100%"
-      />
-    </a>
-  </div>
+        <div class="accordion mt-5" id="accordion-{{ page.slug }}">
+          {% for child in page.children %} {% if child.type_name == 'Question'
+          %}
+          <div class="card">
+            <div class="card-header" id="heading-{{ child.slug }}">
+              <div>
+                <h2 class="accordion-headline">
+                  <a href="{{ child.url }}">{{ child.headline }}</a>
+                </h2>
+                {% if child.question.content.size > 0 %}
+                <div class="accordion-details">
+                  {{ child.question.content }}
+                </div>
+                {% endif %}
+              </div>
+              {% if child.question.answer.size > 0 %}
+              <button
+                class="btn accordion-toggle"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-{{ child.slug }}"
+                aria-expanded="{% if forloop.first == true %}true{% else %}false{% endif %}"
+                aria-controls="collapse-{{ child.slug }}"
+              >
+                <span class="sr-only">{{ t_toggle }}</span>
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 8.25V15.75"
+                    stroke="black"
+                    stroke-opacity="0.5"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+                    stroke="black"
+                    stroke-opacity="0.5"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M8.25 12H15.75"
+                    stroke="black"
+                    stroke-opacity="0.5"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              {% endif %}
+            </div>
+            {% if child.question.answer.size > 0 %}
+            <div
+              id="collapse-{{ child.slug }}"
+              class="collapse{% if forloop.first == true %} show{% endif %}"
+              aria-labelledby="heading-{{ child.slug }}"
+              data-parent="#accordion-{{ page.slug }}"
+            >
+              <div class="card-body">
+                {{ child.question.answer }}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+          {% endif %} {% endfor %}
+        </div>
 
-  <div class="col-lg-4 offset-lg-1">
-    <img
-      class="graphic-faq"
-      src="https://dsasf-62612.web.app/empty-homes-tax/empty-sf-building.jpeg"
-      width="100%"
-    />
-    <p>
-      A Mission Bay apartment building sits with starkly visible vacancies
-    </p>
-
-    <img
-      class="graphic-faq"
-      src="https://dsasf-62612.web.app/empty-homes-tax/one-oak-empty.png"
-      width="100%"
-      style="margin-top: 48px;"
-      alt="Photo looking up at building where every unit looks the same, nothing is on any porch or in any window, the building is completely empty"
-    />
-    <p>
-      The Oak, a 109 unit building on Market St, is reported to be 100% vacant
-      over a year after completion
-    </p>
+        {% if page.tags_count > 0 %} {% include "page_tags" with page %} {%
+        endif %} {% if page.show_stream? %} {% include "page_stream" %} {% endif
+        %}
+      </div>
+    </div>
   </div>
-
-  {% if page.tags_count > 0 %}
-  <div class="mt-4">
-    {% include "page_tags" with page %}
-  </div>
-  {% endif %} {% if page.show_stream? %}
-  <div class="mt-4">
-    {% include "page_stream" %}
-  </div>
-  {% endif %}
 </div>
-
-{% endcapture %} {% include "content", sidebar: request.is_sidebar? %}
