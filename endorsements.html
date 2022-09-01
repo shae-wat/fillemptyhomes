@@ -1,212 +1,25 @@
-<style>
-    a {
-      color: #2B3990;
-    }
-    h2,
-    h3,
-    a:hover {
-      color: #9A8ABB !important;
-    }
+{% include "social_share_widget" %}
 
-    button.btn-primary,
-    input.btn-primary,
-    a.btn-primary {
-      color: #000000;
-      background-color: #FFF200;
-      border-color: #FFF200;
-    }
-    button.btn-primary:hover,
-    input.btn-primary:hover,
-    a.btn-primary:hover {
-      color: #ffffff;
-      background-color: #3e98a1;
-      border-color: #3e98a1;
-    }
-
-    input.form-control:focus,
-    select:focus,
-    div.payment-input:focus {
-      border-color: #0086ff !important;
-    }
-
-    .custom-control-input:checked ~ .custom-control-label::before,
-    .custom-control-input:focus {
-      color: #fff;
-      border-color: #0086ff;
-      background-color: #0086ff;
-    }
-
-    #logo-image-empty-homes-tax {
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    .graphic-faq {
-      margin: 1rem auto;
-    }
-
-    #graphic-faq-p {
-      margin-top: -48px;
-      margin-left: auto:
-      margin-right: auto;
-    }
-
-    #intro p {
-      font-size: 112%;
-      color: #666;
-    }
-
-    #logo-image-empty-homes-tax-donate {
-      margin-top: 64px;
-      margin-bottom: 48px;
-      margin-left: auto:
-      margin-right: auto;
-    }
-
-    .rapid-header::after {
-      background: none;
-    }
-
-    .my-5 {
-      margin-top: 0 !important;
-    }
-
-    nav.custom-header {
-      position: relative;
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-width: 100%;
-      z-index: 9999999;
-      margin-bottom: 48px;
-    }
-
-    nav.custom-header a {
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: 900;
-      letter-spacing: 1px;
-      word-spacing: -3px;
-      text-decoration: none;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .rapid-header {
-      min-height: 240px !important;
-    }
-
-    #intro {
-      margin: 0 64px 64px 0;
-    }
-
-    .secondary-content {
-      margin-top: 64px;
-    }
-
-    @media only screen and (max-width: 768px) {
-
-      #logo-image-empty-homes-tax {
-        margin-top: 0;
-        margin-bottom: 24px;
-        padding-right: 0;
-      }
-
-      #intro {
-        margin: 0 0 64px 0;
-      }
-
-      .desktop-only {
-        display: none;
-      }
-
-      .rapid-header {
-        min-height: 140px !important;
-      }
-
-      nav.custom-header a {
-        font-size: 1rem;
-        font-weight: 800;
-      }
-    }
-
-    @media only screen and (min-width: 769px) {
-      .mobile-only {
-        display: none;
-      }
-    }
-
-    div.question-list {
-      display: none;
-    }
-
-    footer.rapid-footer p:nth-child(2) {
-      margin-bottom: 0;
-    }
-
-    footer.rapid-footer p:first-of-type a:first-of-type {
-      font-size: 1.2rem;
-      font-weight: 500;
-      text-decoration: none;
-    }
-
-    footer.rapid-footer p:nth-child(2) a:first-of-type {
-      font-size: 1rem;
-      color: #0067c2;
-      text-decoration: underline;
-    }
-
-    footer.rapid-footer nav {
-      max-width: 100%;
-    }
-
-    footer.rapid-footer nav a {
-      font-size: 1.5rem;
-      font-weight: 900;
-      color: #2B3990;
-      letter-spacing: 1px;
-      text-decoration: none;
-    }
-
-    footer.rapid-footer p {
-      font-size: 1rem;
-      color: #000000;
-    }
-
-    .container li {
-      font-size: 1.1rem;
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
-  }
-</style>
-
-{% capture page_headline %}{{ page.headline }}{% endcapture %} {% capture
-page_content %}
-<div class="desktop-only">
-  <nav class="row custom-header">
-    <a href="/join">Join</a>
-    <a href="/faq">FAQ</a>
-    <a href="/works">How It Works</a>
-    <a href="/donate">Donate</a>
-    <a href="/vacias">Traducción</a>
-  </nav>
+<div class="page">
+  <div
+    class="page-inner{% unless page.basic.content.size > 0 %}{% if page.is_homepage? %} pt-0{% endif %}{% endunless %}{% if page.is_homepage? == true and site.page_tags contains 'homepage' and page.show_stream? == false %} pb-0{% endif %}"
+  >
+    {% include "breadcrumbs" %}
+    <div class="row justify-content-center">
+      <div
+        class="{% if page.is_homepage? == true and site.page_tags contains 'homepage' %}col{% else %}col-lg-9{% endif %}"
+      >
+        {% if page.headline.size > 0 %}
+        <h2 class="page-headline">{{ page.headline }}</h2>
+        {% endif %} {% if page.basic.content.size > 0 %}
+        <div class="page-content">
+          {{ page.basic.content }}
+        </div>
+        {% endif %} {% include "page_tags" with page %} {% if page.is_homepage?
+        == true and site.page_tags contains "homepage" %} {% tag "homepage" with
+        "homepage_widget" %} {% endif %} {% if page.show_stream? %} {% include
+        "page_stream" %} {% endif %}
+      </div>
+    </div>
+  </div>
 </div>
-<div class="mobile-only">
-  <nav class="row custom-header">
-    <a href="/join">Join</a>
-    <a href="/faq">FAQ</a>
-    <a href="/donate">Donate</a>
-    <a href="/vacias">Traducción</a>
-  </nav>
-</div>
-{{ page.basic.content }} {% include "page_tags" with page %} {% if
-page.is_homepage? == true and site.page_tags contains "homepage" %}
-<div class="mt-4">
-  {% tag "homepage" with "homepage_widget" %}
-</div>
-{% endif %} {% endcapture %} {% include "content", sidebar: request.is_sidebar?
-%}
