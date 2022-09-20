@@ -25,7 +25,7 @@
   button.btn-primary,
   input.btn-primary,
   a.btn-primary {
-    color: #000000;
+    color: #ffffff !important;
     background-color: #2b3990;
     border-color: #2b3990;
   }
@@ -321,15 +321,16 @@
         and families to make it in the city we call home and love. Let’s fill
         empty homes by passing our vacancy tax in November.
       </p>
-      <p>
-        Sign up to be part of our movement so we can fill empty homes with
-        people and fight back against the endless real estate speculation that
-        is driving up the rent.
-      </p>
 
       <div class="card card-lg mt-5">
         <div class="card-body">
           <div class="form">
+            <h3 class="h4 title-text" style="color: #2b3990;">
+              Sign up to be part of our movement to fill empty San Francisco
+              homes with people and fight back against the endless real estate
+              speculation that is driving up the rent.
+            </h3>
+            <br />
             {% form_for signup %} {% if request.sorta_logged_in? %}
             <div class="mb-4">
               <h3 class="mb-4 h4">{{ t_signup_will_you_join }}</h3>
